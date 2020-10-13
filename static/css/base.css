@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/homepage_background_yellow.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Bangers', cursive;
+}
+
+header {
+    font-family: 'Lato', sans-serif;
+}
+
+/*  Icon class from Bulma CSS framework.
+    This ensure icons remain centred and have a consistent size*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.logo-image {
+    height: 75px;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.start-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+    font-size: 30px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.start-button:hover,
+.start-button:active,
+.start-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: rgb(28, 56, 117);
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on XL screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    /* Push body down to the bottom of the main page header.*/
+    .header-container {
+        padding-top: 164px;
+    }
+}
