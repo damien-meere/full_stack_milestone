@@ -1,0 +1,58 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Absolute Batman Hush Hardcover",
+      "description": "(W) Jeph Loeb (A/CA) Jim Lee. This edition includes BATMAN #608-619 plus the 2-page origin of Batman, a sketchbook section and more. This epic story features Batman's deadliest foes and introduces Hush!",
+      "price": 99.99,
+      "category": 6,
+      "rating": 5.0,
+      "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.co.uk%2FAbsolute-Batman-Hush-Jeph-Loeb%2Fdp%2F1401204260&psig=AOvVaw2xrf7XeGSKzskKWkAhRz3T&ust=1602690245271000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLiPisv0sewCFQAAAAAdAAAAABAD",
+      "image": "71yB5ICj5TL.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001600425",
+      "name": "Absolute Batman The Court of Owls Hardcover",
+      "description": "(W) Scott Snyder, James TynionIV (A) Greg Capullo, Jonathan Glapion (CA) Greg Capullo. The explosive 'Court of Owls' storyline gets the Absolute Edition treatment, collecting BATMAN #1-11! It all begins when a series of brutal murders rocks not only Gotham City to its core but also the Caped Crusader himself when the prime suspect is one of Batman's closest allies - Dick Grayson! After a series of deadly discoveries, Bruce Wayne has learned that the Court of Owls is real - and a deadly threat out to control Gotham City!",
+      "price": 99.99,
+      "category": 6,
+      "rating": 4.6,
+      "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.co.uk%2FAbsolute-Batman-Court-Owls-HC%2Fdp%2F1401259103&psig=AOvVaw06wYZCQBxLC3D_sF7VZXSS&ust=1602690386514000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOj2xov1sewCFQAAAAAdAAAAABAD",
+      "image": "81rKbyT6LFL.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001346755",
+      "name": "Wizards of the Coast: Dungeons & Dragons Board Game",
+      "description": "Lords of Waterdeep is a strategy board game for 2-5 players. You take on the role of one of the masked Lords of Waterdeep, secret rulers of the city. Through your agents, you recruit adventurers to go on quests on your behalf, earning rewards and increasing your influence over the city. Expand the city by purchasing new buildings that open up new actions on the board, and hinder—or help—the other lords by playing Intrigue cards to enact your carefully laid plans.",
+      "price": 44.99,
+      "category": 1,
+      "rating": 4.3,
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/71kvoGKpSvL._AC_SL1200_.jpg",
+      "image": "71kvoGKpSvL._AC_SL1200_.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001356755",
+      "name": "Superman Compression top",
+      "description": "Superman Compression top: Ultra-tight, second skin fit",
+      "price": 18.99,
+      "category": 10,
+      "rating": 4.0,
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/718Ucq4NWwL._AC_SX679._SX._UX._SY._UY_.jpg",
+      "image": "718Ucq4NWwL.jpg"
+    }
+  }
+]
