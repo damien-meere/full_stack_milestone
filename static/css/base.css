@@ -29,7 +29,7 @@ header {
 }
 
 .logo-image {
-    height: 75px;
+    height: 70px;
 }
 
 .main-logo-link {
@@ -66,12 +66,23 @@ header {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on XL screens */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
+    }
+}
+
+/* Change size of index page welcome message for smaller screens */
+@media (max-width: 600px) {
+    .welcome-msg {
+        font-size: 35px;
     }
 }
 
