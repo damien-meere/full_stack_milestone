@@ -95,6 +95,28 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
+.btt-button {
+    font-size: 35px;
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-button:hover {
+    background-color: rgb(97, 97, 97); /* Green */
+    color: white;
+    transition-duration: 0.4s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on XL screens */
