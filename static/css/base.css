@@ -85,6 +85,16 @@ header {
     height: 100%;
 }
 
+.badge {
+    font-size: 18px;
+}
+
+/* enables button to change appearence on hover */
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on XL screens */
