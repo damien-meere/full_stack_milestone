@@ -20,60 +20,61 @@ there are no remaining spaces on a course.
 - [Database](#Database)
 - [UX + User Stories](#UX+User-Stories)
 - [Technologies](#Technologies)
-    - [Site Notes](#Site-Notes)
-    - [Current Features](#Current-Features)
-    - [Future Features](#Future-Features)
-    - [Testing](#Testing)
-    - [Testing - Unresolved Bugs](#Testing-Unresolved_Bugs)
-    - [Deployment](#Deployment)
-    - [Internal Deployment](#Internal-Deployment)
+- [Site Notes](#Site-Notes)
+- [Current Features](#Current-Features)
+- [Future Features](#Future-Features)
+- [Testing](#Testing)
+- [Testing - Unresolved Bugs](#Testing-Unresolved_Bugs)
+- [Deployment](#Deployment)
+- [Internal Deployment](#Internal-Deployment)
 
-    ## Demo
-    A live demo of the project can be found deployed to Heroku [Here](LINK TO BE PROVIDED)
-
-    ## Database
-    ![Database Structure](IMAGE TO BE PROVIDED)
-
-    Describe Categories and reasoning
-
-    Describe Products structure
-
-    ## UX+User-Stories
-
-    Describe User Stories from Excel
-
-    Present and Describe Wireframes for the site and structure
-
-    ## Technologies
-    This project utilises the following technologies:
-    1. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-    2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-    3. [Javascript](https://www.w3schools.com/jsref/)
-    4. [Python](https://www.python.org/)
-    5. [Django Web Framework](https://www.djangoproject.com/)
-    6. [FontAwesome](https://fontawesome.com/)
-    7. [Git](https://git-scm.com/)
-    8. [Heroku](https://www.heroku.com/)
-    9. [Stripe](https://stripe.com/ie)
-
-    ## Current-Features
-
-    Admin Portal - Django based
-    Products pages + navigation + toasts
-    Shopping Bag + stripe
-
-
-    ## Future-Features
-
-    Ratings system linked to user feedback
-
-    ## Testing
-    Validation against the User stories highlighted in previous sections was key. 
-    
-    Therefore the following tests were conducted to ensure that the originally stated users stories were catered to:
 
     
+## Demo
+A live demo of the project can be found deployed to Heroku [Here](LINK TO BE PROVIDED)
 
+    
+## Database
+![Database Structure](IMAGE TO BE PROVIDED)
+
+Describe Categories and reasoning
+
+Describe Products structure
+
+
+## UX+User-Stories
+
+Describe User Stories from Excel
+
+Present and Describe Wireframes for the site and structure
+    
+## Technologies
+This project utilises the following technologies:
+1. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+3. [Javascript](https://www.w3schools.com/jsref/)
+4. [Python](https://www.python.org/)
+5. [Django Web Framework](https://www.djangoproject.com/)
+6. [FontAwesome](https://fontawesome.com/)
+7. [Git](https://git-scm.com/)
+8. [Heroku](https://www.heroku.com/)
+9. [Stripe](https://stripe.com/ie)
+
+## Current-Features
+
+Admin Portal - Django based
+Products pages + navigation + toasts
+Shopping Bag + stripe
+
+
+## Future-Features
+
+Ratings system linked to user feedback
+
+## Testing
+Validation against the User stories highlighted in previous sections was key. 
+    
+Therefore the following tests were conducted to ensure that the originally stated users stories were catered to:
 
 All CSS, HTML and Javascript files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
 checked the markup validity of Web documents against the w3c standards. the [JSHint](https://jshint.com/) utility was used to check for errors and potential problems in the
