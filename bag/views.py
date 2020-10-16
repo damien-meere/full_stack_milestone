@@ -25,7 +25,6 @@ def add_to_bag(request, item_id):
         # if not item in bag just add item base don quantity provided
         bag[item_id] = quantity
 
-    # overwrite bag dict in session 
+    # overwrite bag dict in session
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
