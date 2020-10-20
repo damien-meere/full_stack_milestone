@@ -112,6 +112,7 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}  
+                <!-- Django messages have levels that can be represented as integers as shown below -->
                 {% with message.level as level %}
                     {% if level == 40 %}
                         {% include 'includes/toasts/toast_error.html' %}
