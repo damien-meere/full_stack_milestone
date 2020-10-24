@@ -197,6 +197,7 @@ a.category-badge > span.badge:hover {
 }
 
 
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on XL screens */
@@ -239,3 +240,4 @@ a.category-badge > span.badge:hover {
         height: calc(100vh - 116px);
     }
 }
+
