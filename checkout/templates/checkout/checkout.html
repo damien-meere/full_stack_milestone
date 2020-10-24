@@ -111,9 +111,7 @@
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <!-- Pass the client secret to the view so we can get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                    </fieldset>
-
-                    
+                    </fieldset>  
                     <div class="submit-button text-right mt-5 mb-2">
                         <!-- Link back to shopping Bag should the user want to adjust anything-->   
                         <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
@@ -142,4 +140,13 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <!-- In order to render Django template variables in external javascript files.
+        We need to use a built-in template filter called json_script -->
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
