@@ -20,7 +20,6 @@ def cache_checkout_data(request):
         # setup stripe payment intent and add save info metadata
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            # json dmup of shopping bag
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
