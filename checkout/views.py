@@ -46,8 +46,7 @@ def checkout(request):
                     # if product has size, iterate thoguht eace size and
                     # create line item accordingly
                     else:
-                        for size, quantity in item_data['items_by_size\
-                                '].items():
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
