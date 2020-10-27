@@ -53,6 +53,9 @@ form.addEventListener('submit', function(ev) {
     // Instead disable both the card element and submit button to prevent multiple submissions
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+    // trigger overlay and fade out form when use clicks submit
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     // send card infomation to stripe
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
