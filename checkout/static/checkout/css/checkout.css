@@ -36,6 +36,17 @@
     border: 1px solid #000;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+/*Select elements are black by default (above) or gray if its invalid due to not having anything selected */
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;
