@@ -51,7 +51,14 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            # get stripe payment id in order to unique id for each transaction
+            # so custoemrs can order the same things multiple times and orders
+            # will not be confused.
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
+            order.save()
             # iterate through the bag items to create line items
             for item_id, item_data in bag.items():
                 try:
