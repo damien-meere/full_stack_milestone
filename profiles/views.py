@@ -16,10 +16,12 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
+    else:
+        messages.error(request, 'Profile update Fail. Ensure\
+                                all field are valid')
     # Use the profile and the related name on the order model
     # to get the users orders and return those to the template
-    form = UserProfileForm(instance=profile)
+        form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
     template = 'profiles/profile.html'
