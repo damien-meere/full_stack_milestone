@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
@@ -43,7 +44,8 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search parameters")
+                messages.error(request, "You didn't enter any\
+                                search parameters")
                 return redirect(reverse('products'))
 
             # Q object allows us to bring an OR operation into the search.
@@ -76,8 +78,15 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add a product to the store """
+    # If the user is not a superuser redirect them back to the home
+    # page with the message that only store owners can perform this function.
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     # if method is POST, create new instance of form and include
     # request files (images)
     if request.method == 'POST':
@@ -102,8 +111,15 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit a product """
+    # If the user is not a superuser redirect them back to the home
+    # page with the message that only store owners can perform this function.
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     # get product based on the ID thats been passed in,
     # then populate the form with the details of the product
     product = get_object_or_404(Product, pk=product_id)
@@ -129,8 +145,15 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
     """ Delete a product """
+    # If the user is not a superuser redirect them back to the home
+    # page with the message that only store owners can perform this function.
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
