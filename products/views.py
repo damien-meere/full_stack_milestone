@@ -167,7 +167,6 @@ def edit_product_inventory(product_id, quantity):
     # order quantity from the stock_level
     product = get_object_or_404(Product, pk=product_id)
     updated_stock = product.stock_level - quantity
-    print("updated stock count: "+str(updated_stock))
     product.stock_level = updated_stock
     product.save()
     print('Product Updated!')

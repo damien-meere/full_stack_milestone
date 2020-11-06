@@ -169,9 +169,7 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
-
-        # Once order is complete, need to sort inventory
-        # here in form of {"product id": quantity}, and
+        # Once order is complete-  update inventory
         # convert dictionary string to dictionary
         inventory_bag = json.loads(order.original_bag)
         # iterate through bag items
@@ -180,21 +178,12 @@ def checkout_success(request, order_number):
             # product = Product.objects.get(id=item_id)
             # if item_data is an int, product doesnt have a size
             if isinstance(item_data, int):
-                # print("name: "+product.name)
-                # print("quantity: "+str(item_data))
-
                 edit_product_inventory(item_id, item_data)
-
             # if product has size, iterate through each size and
             # create line item accordingly
             else:
                 for size, quantity in item_data['items_by_size'].items():
-                    # print("name: "+product.name)
-                    # print("quantity: "+str(quantity))
-                    # print("size: "+size)
-
                     edit_product_inventory(item_id, quantity)
-
         # Save the user's info
         if save_info:
             profile_data = {
