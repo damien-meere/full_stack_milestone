@@ -6,6 +6,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
+from products.views import edit_product_inventory
 from bag.contexts import bag_contents
 
 from profiles.forms import UserProfileForm
@@ -55,9 +56,9 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            # get stripe payment id in order to unique id for each transaction
-            # so custoemrs can order the same things multiple times and orders
-            # will not be confused.
+            # get stripe payment id in order to uniquely id for each
+            # transaction so custoemrs can order the same things
+            # multiple times and orders will not be confused.
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
@@ -94,7 +95,7 @@ def checkout(request):
                     order.delete()
                     # return user to shopping bag
                     return redirect(reverse('view_bag'))
-            # if the user wated to save their profile redirect to
+            # if the user wanted to save their profile redirect to
             # checkout_success with the order number as an additional argument
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
@@ -117,7 +118,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        # if user is authenticated, rendero form with details pre-filled
+        # if user is authenticated, render form with details pre-filled
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -139,7 +140,7 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
-    # alert in case the public key ahs not been set
+    # alert in case the public key has not been set
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
@@ -168,6 +169,31 @@ def checkout_success(request, order_number):
         # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+
+        # Once order is complete, need to sort inventory
+        # here in form of {"product id": quantity}, and
+        # convert dictionary string to dictionary
+        inventory_bag = json.loads(order.original_bag)
+        # iterate through bag items
+        for item_id, item_data in inventory_bag.items():
+            # get product ID, if value is int = no size field
+            # product = Product.objects.get(id=item_id)
+            # if item_data is an int, product doesnt have a size
+            if isinstance(item_data, int):
+                # print("name: "+product.name)
+                # print("quantity: "+str(item_data))
+
+                edit_product_inventory(item_id, item_data)
+
+            # if product has size, iterate through each size and
+            # create line item accordingly
+            else:
+                for size, quantity in item_data['items_by_size'].items():
+                    # print("name: "+product.name)
+                    # print("quantity: "+str(quantity))
+                    # print("size: "+size)
+
+                    edit_product_inventory(item_id, quantity)
 
         # Save the user's info
         if save_info:

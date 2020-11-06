@@ -158,3 +158,17 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def edit_product_inventory(product_id, quantity):
+    """ Edit a product inventory count"""
+    # get product based on the ID thats been passed in,
+    # the calculate the new stock count by subtracting the
+    # order quantity from the stock_level
+    product = get_object_or_404(Product, pk=product_id)
+    updated_stock = product.stock_level - quantity
+    print("updated stock count: "+str(updated_stock))
+    product.stock_level = updated_stock
+    product.save()
+    print('Product Updated!')
+    return
