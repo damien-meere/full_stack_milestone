@@ -95,6 +95,28 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Stock Warning -->
+                            <div class="col-12">
+                                {% if product.stock_level %}
+                                    {% if product.stock_level > 10 %}
+                                        <div class="alert alert-success" role="alert">
+                                            Item in Stock
+                                        </div>
+                                    {% elif product.stock_level >= 1 %}
+                                        <div class="alert alert-warning" role="alert">
+                                            Only {{ product.stock_level }} of this product left in stock
+                                        </div>
+                                    {% endif %}
+                                    {% else %}
+                                        <div class="alert alert-danger" role="alert">
+                                            Out Of Stock
+                                        </div>
+                                    
+                                {% endif %}
+                            </div>
+
+                            <!-- Buttons -->
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
@@ -102,10 +124,19 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <!-- if the stock level has been set, check its level-->
+                                {% if product.stock_level %}
+                                    <!-- if stock level is greater than 1 allow the add to bag button -->
+                                    {% if product.stock_level >= 1 %}
+                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                    {% endif %}
+                                    <!-- if stock level is less than 1 disable the add to bag button -->
+                                    {% else %}
+                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag" disabled>
+                                {% endif %} 
                             </div>
                             <!-- Redirects the user back to the same page once the product is added to bag -->
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
                         </div>
                     </form>
