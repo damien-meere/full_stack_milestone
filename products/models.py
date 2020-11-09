@@ -51,6 +51,5 @@ class Product_Review(models.Model):
     rating = models.IntegerField(validators=[MaxValueValidator(5),
                                              MinValueValidator(0)],
                                  null=False, default=0)
-    pub_date = models.DateTimeField('date published')
-    user_name = models.CharField(max_length=100)
+    date = models.DateTimeField(auto_now_add=True)
     comment = models.CharField(max_length=200)
