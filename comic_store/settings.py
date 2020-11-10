@@ -43,9 +43,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.twitter',
     'home',
     'products',
     'bag',
@@ -98,19 +95,6 @@ TEMPLATES = [
 ]
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
-SOCIAL_AUTH_FACEBOOK_KEY = os.getenv('SOCIAL_AUTH_FACEBOOK_KEY', '')
-SOCIAL_AUTH_FACEBOOK_SECRET = os.getenv('SOCIAL_AUTH_FACEBOOK_SECRET', '')
-
-SOCIALACCOUNT_PROVIDERS = {'facebook': {
-                                'METHOD': 'oauth2',
-                                'SCOPE': ['email','public_profile'],
-                                'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
-
-                                'LOCALE_FUNC': lambda request: 'en_US',
-                                'VERSION': 'v2.4'
-                            },
-                           'google': {}, 'twitter': {}}
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
