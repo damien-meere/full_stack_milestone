@@ -1,8 +1,5 @@
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
-
-from profiles.models import UserProfile
-from checkout.models import Order
+from django.core.validators import MinValueValidator
 
 
 class Category(models.Model):
@@ -37,19 +34,3 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Product_Review(models.Model):
-    product = models.ForeignKey('Product', null=True, blank=True,
-                                on_delete=models.SET_NULL)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True,
-                                     related_name='orders')
-    order = models.ForeignKey(Order, null=False, blank=False,
-                              on_delete=models.CASCADE,
-                              related_name='lineitems')
-    rating = models.IntegerField(validators=[MaxValueValidator(5),
-                                             MinValueValidator(0)],
-                                 null=False, default=0)
-    date = models.DateTimeField(auto_now_add=True)
-    comment = models.CharField(max_length=200)
