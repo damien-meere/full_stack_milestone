@@ -65,7 +65,8 @@ This project utilises the following technologies:
 Admin Portal - Django based
 Products pages + navigation + toasts
 Shopping Bag + stripe
-
+SKU Generator
+Inventory counter
 
 ## Future-Features
 

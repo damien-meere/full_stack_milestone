@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 
+import uuid
+
+from random import randint
 
 class Category(models.Model):
 
@@ -34,3 +37,23 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    # private method available only to Product Class
+    def _generate_sku_number(self):
+        """
+        Generate a random, unique 10 digit SKU number starting with CB
+        """
+        range_start = 10**(10-1)
+        range_end = (10**10)-1
+        sku_num = randint(range_start, range_end)
+        sku_str = "CB"+str(sku_num)
+        return sku_str
+
+    def save(self, *args, **kwargs):
+        """
+        Override the product save method to generate the SKU number
+        if it hasn't been set already.
+        """
+        if not self.sku:
+            self.sku = self._generate_sku_number()
+        super().save(*args, **kwargs)
