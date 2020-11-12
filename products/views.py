@@ -6,6 +6,8 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+from checkout.models import Order
+
 # Create your views here.
 
 
@@ -171,3 +173,22 @@ def edit_product_inventory(product_id, quantity):
     product.save()
     print('Product Updated!')
     return
+
+
+def product_review(request, order_number):
+    # get order
+    order = get_object_or_404(Order, order_number=order_number)
+    # provide message to user
+
+    print("order number: "+order.order_number)
+
+    messages.info(request, (
+        f'Leave a Review for {order_number}.'
+    ))
+    template = 'products/product_review.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)

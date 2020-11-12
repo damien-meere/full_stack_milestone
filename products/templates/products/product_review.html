@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font mb-4">Product Review</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Specific Order Details -->
+            <div class="col-12">
+                <p class="text-muted">Orer Details</p>
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Order Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{ order.order_number }}
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {% if item.product.has_sizes %}
+                                                    Size {{ item.product.size|upper }}
+                                                {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>€{{ order.grand_total }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+            </div>
+            
+            <!-- Select Order Item -->
+            <div class="row">
+                <div class="col">
+                    <label for="item-select">Choose Order Item:</label>
+                    <select name="items" id="item-select">
+                        <option value="">--Please choose an option--</option>
+                        {% for item in order.lineitems.all %}
+                            <option value="{{ item.product.name }}">{{ item.product.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="rating-select">Choose Order Rating:</label>
+                    <select name="rating" id="rating-select">
+                        <option value="">--Please choose an option--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Select Rating -->
+            
+            
+            
+        </div>
+        <!-- Buttons -->
+            <div class="row">
+                <div class="col-12 text-right">
+                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-caret-left"></i>
+                        </span>
+                        <span class="text-uppercase">Return to your Profile</span>
+                    </a>
+                </div>
+		    </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
