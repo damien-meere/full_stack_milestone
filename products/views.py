@@ -196,10 +196,12 @@ def add_review(request):
     if request.method == 'POST':
         print("In Add_Review")
         # Gather Review Elements from Review (PID, Rating & Review text)
+        user = request.user
         pid = request.POST.get('pid', '')
         rating = request.POST.get('rating', '')
         review = request.POST.get('review', '')
 
+        print("User: " + str(user))
         print("Product ID: " + pid)
         print("Rating: " + rating)
         print("Review: " + review)
