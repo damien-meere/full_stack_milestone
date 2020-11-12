@@ -59,8 +59,34 @@ class Product(models.Model):
 
 
 class ProductReview(models.Model):
+    review_id = models.CharField(max_length=254, null=True, blank=True)
     user = models.CharField(max_length=254, null=False)
     product = models.CharField(max_length=254, null=False)
-    rating = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)],
-                                      null=False, default=0)
+    rating = models.IntegerField(validators=[MinValueValidator(0),
+                                             MaxValueValidator(5)],
+                                 null=False, default=0)
     review = models.TextField()
+    timestamp = models.CharField(max_length=254, null=True)
+
+    # private method available only to ProductReview Class
+    def _generate_review_number(self):
+        """
+        Generate a random, unique 10 digit Product Review
+        (PR) number starting with PR
+        """
+        range_start = 10**(10-1)
+        range_end = (10**10)-1
+        pr_num = randint(range_start, range_end)
+        pr_str = "PR"+str(pr_num)
+        return pr_str
+
+    def save(self, *args, **kwargs):
+        """
+        Override the save method to generate the PR number number
+        """
+        if not self.review_id:
+            self.review_id = self._generate_review_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.review_id

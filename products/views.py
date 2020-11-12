@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 from .forms import ProductForm
 
 from checkout.models import Order
@@ -194,21 +194,23 @@ def product_review(request, order_number):
 
 def add_review(request):
     if request.method == 'POST':
-        print("In Add_Review")
         # Gather Review Elements from Review (PID, Rating & Review text)
         user = request.user
         pid = request.POST.get('pid', '')
         rating = request.POST.get('rating', '')
         review = request.POST.get('review', '')
 
-        print("User: " + str(user))
-        print("Product ID: " + pid)
-        print("Rating: " + rating)
-        print("Review: " + review)
-
         # get Timestamp for review submission in local date and time
         dateTimeObj = datetime.now()
         timestampStr = dateTimeObj.strftime("%d-%b-%Y (%H:%M)")
         print('Current Timestamp : ', timestampStr)
+
+        # Create and Save Product Review instance
+        ProductReview.objects.create(user=str(user),
+                                     product=pid,
+                                     rating=rating,
+                                     review=review,
+                                     timestamp=timestampStr)
         messages.success(request, 'Review Submission Successful!')
+        # Return the user to their profile page
         return redirect(reverse('profile'))
