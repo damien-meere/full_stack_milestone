@@ -1,9 +1,8 @@
 from django.db import models
-from django.core.validators import MinValueValidator
-
-import uuid
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 from random import randint
+
 
 class Category(models.Model):
 
@@ -57,3 +56,11 @@ class Product(models.Model):
         if not self.sku:
             self.sku = self._generate_sku_number()
         super().save(*args, **kwargs)
+
+
+class ProductReview(models.Model):
+    user = models.CharField(max_length=254, null=False)
+    product = models.CharField(max_length=254, null=False)
+    rating = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(5)],
+                                      null=False, default=0)
+    review = models.TextField()

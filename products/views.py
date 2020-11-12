@@ -210,5 +210,5 @@ def add_review(request):
         dateTimeObj = datetime.now()
         timestampStr = dateTimeObj.strftime("%d-%b-%Y (%H:%M)")
         print('Current Timestamp : ', timestampStr)
-
+        messages.success(request, 'Review Submission Successful!')
         return redirect(reverse('profile'))
