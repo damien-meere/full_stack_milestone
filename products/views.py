@@ -8,6 +8,8 @@ from .forms import ProductForm
 
 from checkout.models import Order
 
+from datetime import datetime
+
 # Create your views here.
 
 
@@ -182,13 +184,29 @@ def product_review(request, order_number):
 
     print("order number: "+order.order_number)
 
-    messages.info(request, (
-        f'Leave a Review for {order_number}.'
-    ))
     template = 'products/product_review.html'
     context = {
         'order': order,
         'from_profile': True,
     }
-
     return render(request, template, context)
+
+
+def add_review(request):
+    if request.method == 'POST':
+        print("In Add_Review")
+        # Gather Review Elements from Review (PID, Rating & Review text)
+        pid = request.POST.get('pid', '')
+        rating = request.POST.get('rating', '')
+        review = request.POST.get('review', '')
+
+        print("Product ID: " + pid)
+        print("Rating: " + rating)
+        print("Review: " + review)
+
+        # get Timestamp for review submission in local date and time
+        dateTimeObj = datetime.now()
+        timestampStr = dateTimeObj.strftime("%d-%b-%Y (%H:%M)")
+        print('Current Timestamp : ', timestampStr)
+
+        return redirect(reverse('profile'))

@@ -40,8 +40,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    {{ order.order_number }}
+                                <td >
+                                    <div class="d-lg-none">{{ order.order_number|truncatechars:6 }}</div>
+                                    <div class="d-none d-lg-block">{{ order.order_number }}</div>
                                 </td>
                                 <td>{{ order.date }}</td>
                                 <td>
@@ -61,47 +62,59 @@
                     </table>
                 </div>
                 <hr>
-            </div>
-            
-            <!-- Select Order Item -->
-            <div class="row">
-                <div class="col">
-                    <label for="item-select">Choose Order Item:</label>
-                    <select name="items" id="item-select">
-                        <option value="">--Please choose an option--</option>
-                        {% for item in order.lineitems.all %}
-                            <option value="{{ item.product.name }}">{{ item.product.name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="rating-select">Choose Order Rating:</label>
-                    <select name="rating" id="rating-select">
-                        <option value="">--Please choose an option--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
-            <!-- Select Rating -->
-            
-            
-            
+
+                <!-- Select Order Item -->
+                <form method="POST" action="{% url 'add_review' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col">
+                            <label for="itemselect">Choose Item for Review:</label>
+                            <select name="pid" id="itemselect">
+                                <option value="">--Please Item--</option>
+                                {% for item in order.lineitems.all %}
+                                    <!-- present user with Name, but submit Product ID -->
+                                    <option value="{{ item.product.id }}">{{ item.product.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col text-right">
+                            <!-- Select Rating -->
+                            <label for="ratingselect">Choose Order Rating:</label>
+                            <select name="rating" id="ratingselect">
+                                <option value="">--Choose Rating--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="col d-none d-lg-block"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-top: 20px;">               
+                            <textarea id="review" name="review" rows="10" cols="50" placeholder="Please enter your Product Review:"></textarea>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="text-left">
+                        <a href="{% url 'order_history' order.order_number %}" class="btn btn-black rounded-0 my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-arrow-left"></i>
+                            </span>
+                            <span class="text-uppercase">Return to Order Details</span>
+                        </a>
+                        <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-user-alt"></i>
+                            </span>
+                            <span class="text-uppercase">Return to Your Profile</span>
+                        </a>
+                        <button class="btn btn-black rounded-0" type="submit">Submit Review</button>
+                    </div>
+                </form> 
+            </div>            
         </div>
-        <!-- Buttons -->
-            <div class="row">
-                <div class="col-12 text-right">
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-caret-left"></i>
-                        </span>
-                        <span class="text-uppercase">Return to your Profile</span>
-                    </a>
-                </div>
-		    </div>
     </div>
 {% endblock %}
 
