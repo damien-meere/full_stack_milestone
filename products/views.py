@@ -199,18 +199,37 @@ def add_review(request):
         pid = request.POST.get('pid', '')
         rating = request.POST.get('rating', '')
         review = request.POST.get('review', '')
+        # get product instance
+        product = get_object_or_404(Product, pk=pid)
 
         # get Timestamp for review submission in local date and time
         dateTimeObj = datetime.now()
         timestampStr = dateTimeObj.strftime("%d-%b-%Y (%H:%M)")
-        print('Current Timestamp : ', timestampStr)
 
         # Create and Save Product Review instance
         ProductReview.objects.create(user=str(user),
                                      product=pid,
+                                     name=product.name,
                                      rating=rating,
                                      review=review,
                                      timestamp=timestampStr)
+
+        # We now need to update the product rating based on the review input
+        # First get all reviews related to that product
+        allReviews = ProductReview.objects.filter(product=pid)
+        # Number of Reviews for that product
+        reviewtotal = allReviews.count()
+        # Get sum of all ratings
+        sumRating = 0
+        for reviews in allReviews:
+            sumRating += reviews.rating
+
+        # Average rating is total Sum / number of reviews
+        averageRating = sumRating/reviewtotal
+        product.rating = averageRating
+        product.save()
+        print('Product Rating Updated!')
+
         messages.success(request, 'Review Submission Successful!')
         # Return the user to their profile page
         return redirect(reverse('profile'))

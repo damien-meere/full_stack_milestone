@@ -70,7 +70,6 @@
                         <div class="col">
                             <label for="itemselect">Choose Item for Review:</label>
                             <select name="pid" id="itemselect">
-                                <option value="">--Please Item--</option>
                                 {% for item in order.lineitems.all %}
                                     <!-- present user with Name, but submit Product ID -->
                                     <option value="{{ item.product.id }}">{{ item.product.name }}</option>
