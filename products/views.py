@@ -71,12 +71,14 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ Return individual product, pass to product_detail.html """
+    """ Return product and it's reviews and pass to product_detail.html """
 
     product = get_object_or_404(Product, pk=product_id)
+    productReviews = ProductReview.objects.filter(product=product_id)
 
     context = {
         'product': product,
+        'reviews': productReviews,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -180,10 +182,6 @@ def edit_product_inventory(product_id, quantity):
 def product_review(request, order_number):
     # get order
     order = get_object_or_404(Order, order_number=order_number)
-    # provide message to user
-
-    print("order number: "+order.order_number)
-
     template = 'products/product_review.html'
     context = {
         'order': order,

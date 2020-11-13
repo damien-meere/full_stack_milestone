@@ -143,6 +143,35 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-lg-6 col-md-12">
+                <!-- Present User with User Reviews-->
+                {% for review in reviews %}  
+                    <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                        <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-comment text-white"></i></div>
+                        <p class="mb-0 mt-2 font-italic">{{ review.review }}</p>
+                        <footer class="blockquote-footer pt-4 mt-4 border-top">Reviewer: {{ review.user }}
+                            <cite title="Source Title">Rating: {{ review.rating }}/5</cite>
+                        </footer>
+                    </blockquote>
+                {% endfor %}
+                     
+                <!--
+                {% for review in reviews %}
+                    <div class="card">
+                        <h5 class="card-header">Review: {{ review.review_id }} </h5>
+                        <div class="card-body">
+                            <h5 class="card-title">Reviewer: {{ review.user }}</h5>
+                            <p class="card-text">{{ review.review }}</p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+                -->
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 {% endblock %}
 
