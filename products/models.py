@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 from random import randint
+import uuid
 
 
 class Category(models.Model):
@@ -62,6 +63,8 @@ class ProductReview(models.Model):
     review_id = models.CharField(max_length=254, null=True, blank=True)
     user = models.CharField(max_length=254, null=False)
     product = models.CharField(max_length=254, null=False)
+    # product = models.ForeignKey('Product', null=True, blank=True,
+    # on_delete=models.CASCADE)
     name = models.CharField(max_length=254, null=True)
     rating = models.IntegerField(validators=[MinValueValidator(0),
                                              MaxValueValidator(5)],
@@ -91,3 +94,32 @@ class ProductReview(models.Model):
 
     def __str__(self):
         return self.review_id
+
+
+class ProductInventory(models.Model):
+    inventory_number = models.CharField(max_length=32,
+                                        null=False,
+                                        editable=False)
+    product = models.ForeignKey('Product', null=True, blank=True,
+                                on_delete=models.CASCADE)
+    stock_level = models.IntegerField(validators=[MinValueValidator(0)],
+                                      null=False, default=0)
+
+    # private method available only to ProductInventory Class
+    def _generate_Inventory_number(self):
+        """
+        Generate a random, unique inventory number
+        """
+        return uuid.uuid4().hex.upper()
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the order number
+        if it hasn't been set already.
+        """
+        if not self.inventory_number:
+            self.inventory_number = self._generate_Inventory_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.inventory_id
