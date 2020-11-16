@@ -206,8 +206,7 @@ def add_review(request):
 
         # Create and Save Product Review instance
         ProductReview.objects.create(user=str(user),
-                                     product=pid,
-                                     name=product.name,
+                                     product=product,
                                      rating=rating,
                                      review=review,
                                      timestamp=timestampStr)

@@ -27,7 +27,6 @@ class ReviewAdmin(admin.ModelAdmin):
         'review_id',
         'user',
         'product',
-        'name',
         'rating',
         'review',
         'timestamp',
