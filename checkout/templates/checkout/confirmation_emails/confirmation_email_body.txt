@@ -1,6 +1,6 @@
 Hey {{ order.full_name }}!
 
-This is a confirmation of your recent order with us here at The Compic Store. Your order information is below:
+This is a confirmation of your recent order with us here at The Comic Store. Your order information is below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}

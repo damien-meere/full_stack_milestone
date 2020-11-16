@@ -225,7 +225,6 @@ def add_review(request):
         averageRating = sumRating/reviewtotal
         product.rating = averageRating
         product.save()
-        print('Product Rating Updated!')
 
         messages.success(request, 'Review Submission Successful!')
         # Return the user to their profile page
