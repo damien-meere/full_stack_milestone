@@ -335,18 +335,35 @@ input[name='q']::placeholder {
 
 /* Review page Quotes */
 .blockquote-custom {
-  position: relative;
-  font-size: 1.1rem;
+    position: relative;
+    font-size: 1.1rem;
 }
 
 .blockquote-custom-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -25px;
-  left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50px;
 }
+
+/* Email Sign-Up Modal */
+.modal {
+    position: fixed;
+  
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+

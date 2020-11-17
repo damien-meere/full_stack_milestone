@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -52,3 +52,13 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def subscribe_List(request):
+    # get email
+    email = request.POST.get('email', '')
+    print(email)
+
+    # save email address to subscriber
+    messages.success(request, ('Thanks for subscribing'))
+    return redirect(reverse('home'))
