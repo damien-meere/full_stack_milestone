@@ -37,16 +37,16 @@ A live demo of the project can be found deployed to Heroku [Here](LINK TO BE PRO
 ## Database
 ![Database Structure](IMAGE TO BE PROVIDED)
 
-Describe Categories and reasoning
-
-Describe Products structure
-
+Describe Categories
+Describe Updated Products structure - Inventory
+Describe SubscriberList Structure and Reasoning
+Describe ProductReview Structure and Reasoning
 
 ## UX+User-Stories
 
 Describe User Stories from Excel
 
-Present and Describe Wireframes for the site and structure
+In particular highlight the Mailing list, Review and Inventory functions
     
 ## Technologies
 This project utilises the following technologies:
@@ -63,14 +63,15 @@ This project utilises the following technologies:
 ## Current-Features
 
 Admin Portal - Django based
-Products pages + navigation + toasts
+Products pages + Navigation + toasts
+Product Review + Rating
 Shopping Bag + stripe
 SKU Generator
-Inventory counter
+Inventory function
+Mailing List
 
 ## Future-Features
 
-Ratings system linked to user feedback
 
 ## Testing
 Validation against the User stories highlighted in previous sections was key. 
@@ -90,7 +91,7 @@ the changes.
 
 
 ## Deployment
-A live iteration of this project can be found deployed to [Heroku](LINK TO BE PROVIDED)
+A live iteration of this project can be found deployed to [Heroku](https://dmeere-thecomicstore.herokuapp.com/)
 
 To run locally, you can clone this repository directly into the editor of your choice by pasting `git clone https://github.com/damien-meere/Data-Centric-Development-Milestone-Project.git` 
 into your terminal. To cut ties with this GitHub repository, type `git remote rm origin` into the terminal.
