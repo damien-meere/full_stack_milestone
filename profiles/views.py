@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import UserProfile
+from .models import UserProfile, SubscriberList
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -55,10 +55,22 @@ def order_history(request, order_number):
 
 
 def subscribe_List(request):
-    # get email
+    # get email supplied
     email = request.POST.get('email', '')
     print(email)
+    # check if email already exists in Subscriber List
+    print(SubscriberList.objects.filter(email=email).exists())
 
-    # save email address to subscriber
-    messages.success(request, ('Thanks for subscribing'))
-    return redirect(reverse('home'))
+    if SubscriberList.objects.filter(email=email).exists():
+        # if the email is already on the subscriber list, providse
+        # the user with a notification
+        messages.info(request, ('Subscriber Already Exists'))
+        print("Subscriber Exists")
+        return redirect(reverse('home'))
+    else:
+        # if the email is not already in the subscriber list,
+        # create and save subscriber instance.
+        SubscriberList.objects.create(email=str(email))
+        messages.success(request, ('Thanks for subscribing'))
+        print("Subscriber to be saved")
+        return redirect(reverse('home'))

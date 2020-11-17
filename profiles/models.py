@@ -5,6 +5,7 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+import uuid
 
 class UserProfile(models.Model):
     """
@@ -49,3 +50,30 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing Users: just save the profile
     instance.userprofile.save()
+
+
+class SubscriberList(models.Model):
+    subscriber_id = models.CharField(max_length=32,
+                                     null=False,
+                                     editable=False)
+    email = models.EmailField(max_length=70, null=True,
+                              blank=True, unique=True)
+
+    # private method available only to ProductInventory Class
+    def _generate_subscriber_id(self):
+        """
+        Generate a random, unique subscriber ID number
+        """
+        return uuid.uuid4().hex.upper()
+
+    def save(self, *args, **kwargs):
+        """
+        Override the original save method to set the subscriber ID
+        if it hasn't been set already.
+        """
+        if not self.subscriber_id:
+            self.subscriber_id = self._generate_subscriber_id()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.subscriber_id
