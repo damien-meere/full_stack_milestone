@@ -19,6 +19,8 @@ def profile(request):
     # Get user instance and user email
     user = get_object_or_404(User, username=request.user)
     user_email = str(user.email)
+    if SubscriberList.objects.filter(email=user_email).exists():
+        subTog == "on"
 
     if subTog == "on":
         print("User wants to subscribe")
