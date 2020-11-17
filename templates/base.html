@@ -147,7 +147,7 @@
                             {% csrf_token %}
                             <div class="row">
                                 <div class="col">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email Address" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
                                     <button type="submit" class="btn btn-black rounded-0 text-uppercase">Subscribe</button>
                                 </div>
                             </div>

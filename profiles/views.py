@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 from .models import UserProfile, SubscriberList
 from .forms import UserProfileForm
@@ -11,7 +12,35 @@ from checkout.models import Order
 @login_required
 def profile(request):
     """ Display the user's profile. """
+    subscribed = False
     profile = get_object_or_404(UserProfile, user=request.user)
+    # Get value to subscriber toggle on profile page
+    subTog = request.POST.get('subTogBtn', '')
+    # Get user instance and user email
+    user = get_object_or_404(User, username=request.user)
+    user_email = str(user.email)
+
+    if subTog == "on":
+        print("User wants to subscribe")
+        # if the user is already subscribed
+        if SubscriberList.objects.filter(email=user_email).exists():
+            print("Already Subscribed")
+        else:
+            # create and save subscriber instance.
+            SubscriberList.objects.create(email=user_email)
+        subscribed = True
+    else:
+        print("User does not want to Subscribe")
+        if SubscriberList.objects.filter(email=user_email).exists():
+            print("Subscribed. Now delete")
+            # Delete subscriber instance.
+            subscriber_instance = get_object_or_404(SubscriberList,
+                                                    email=user_email)
+            subscriber_instance.delete()
+            print("Delete Subscription")
+        else:
+            print("No Subscription")
+        subscribed = False
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -30,7 +59,8 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'on_profile_page': True
+        'on_profile_page': True,
+        'subscribed': subscribed,
     }
 
     return render(request, template, context)
