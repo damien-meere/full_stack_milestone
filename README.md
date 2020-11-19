@@ -78,6 +78,8 @@ on Heroku, [Postgres](https://www.postgresql.org/) was employed as the Database 
 installed as an add-on within the Heroku application.
 
 
+
+
 Describe Categories
 Describe Updated Products structure - Inventory
 Describe SubscriberList Structure and Reasoning
