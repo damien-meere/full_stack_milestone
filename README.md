@@ -77,7 +77,9 @@ application itself. This faciliated the early deployment of the User Registratio
 on Heroku, [Postgres](https://www.postgresql.org/) was employed as the Database to house all data. Postgres is an open source object-relational database management system and is 
 installed as an add-on within the Heroku application.
 
+The structure of the database is as follows:
 
+![Database Structure](documentation/database_structure_v3.jpg)
 
 
 Describe Categories
