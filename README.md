@@ -82,10 +82,21 @@ The structure of the database is as follows:
 ![Database Structure](documentation/database_structure_v3.jpg)
 
 
-Describe Categories
-Describe Updated Products structure - Inventory
-Describe SubscriberList Structure and Reasoning
-Describe ProductReview Structure and Reasoning
+### User & UserProfile
+
+### Subscriber List
+
+### Product
+
+### Product Review
+
+### Category
+
+### Order
+
+### Order Line Item
+
+
 
 ## Current-Features
 
