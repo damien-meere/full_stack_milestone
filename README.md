@@ -2,15 +2,20 @@
 ### Full Stack Frameworks with Django Milestone Project - Code Institute
 
 This project website will highlight my capability to employ the various tools illustrated throughout the entirety of the Code Institute programme. The purpose of this project is to
+build a full-stack django-based site, with the requisite business logic to support all aspects of an online store. This django-enabled site allows an admin to create, store and 
+manipulate product records, which are then presented to the site visitors/customers. Customers can create their own profiles, view and sort all products depending on their requirements,
+sign up for mailing lists, view the available inventory on products and leave reviews for products they have purchased. 
 
-build a full-stack django-based site, with the requisite business logic to control a centrally-owned dataset.
+All functionality relating to both site admins and customers is laid out within the User stories below. 
+
+This project is built upon the Django framework and follows the model-template-view architecture pattern. Sqlite was utilised during development as the database for local testing.
+Sqlite is a relational database management system (RDBMS) embedded within the application itself. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/), Postgres is 
+employed as the Database to house all data. Postgres is an open source object-relational database management system. The data structures and associated applications modeals are 
+detailed in the [Database](#Database) section.
+
+Utilising Django and the DBMS highlighted above, site admins, 
 
 
- On creation of a new course, the trainer specifies the maximum number of subscribers a course can take. In defining this value, only that number 
-of trainees will be permitted to enrol on the course. All elements of the courses are editable except for the maximum subscriber value. On the trainer view, the 
-trainer can quickly view what the uptake levels are for each course with a progress bar. The site also enables trainees to view course information, and view the uptake 
-level. And once they have chosen a course, upon submission of their name and email, they will be given feedback as to whether their request has been successful of if 
-there are no remaining spaces on a course.
 
 
 
@@ -31,7 +36,7 @@ there are no remaining spaces on a course.
 
     
 ## Demo
-A live demo of the project can be found deployed to Heroku [Here](LINK TO BE PROVIDED)
+A live demo of the project can be found deployed to Heroku [Here](https://dmeere-thecomicstore.herokuapp.com/)
 
     
 ## Database
@@ -47,6 +52,8 @@ Describe ProductReview Structure and Reasoning
 Describe User Stories from Excel
 
 In particular highlight the Mailing list, Review and Inventory functions
+
+
     
 ## Technologies
 This project utilises the following technologies:
@@ -54,11 +61,14 @@ This project utilises the following technologies:
 2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 3. [Javascript](https://www.w3schools.com/jsref/)
 4. [Python](https://www.python.org/)
-5. [Django Web Framework](https://www.djangoproject.com/)
-6. [FontAwesome](https://fontawesome.com/)
-7. [Git](https://git-scm.com/)
-8. [Heroku](https://www.heroku.com/)
-9. [Stripe](https://stripe.com/ie)
+5. [Bootstrap](https://getbootstrap.com/) - Responsive site functionality
+5. [Django Web Framework](https://www.djangoproject.com/) - Architectural engine
+6. [FontAwesome](https://fontawesome.com/) - Icons utilised throughout the site
+7. [Git](https://git-scm.com/) - Support of Version Control
+8. [Github](https://github.com/) - Host the repository of all previous versions of the build
+8. [Heroku](https://www.heroku.com/) - Cloud platform as a service enabling deployment 
+9. [Stripe](https://stripe.com/ie) - Online payment processing platform
+10. [Postgres](https://www.postgresql.org/) - open source object-relational database system
 
 ## Current-Features
 
