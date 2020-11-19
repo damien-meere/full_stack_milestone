@@ -128,8 +128,14 @@ To deploy the project to Heroku you will need to do the following:
 3.  Verify that the project has an up to date Procfile and requirements.txt
 4.  Ensure you have Heroku set up as a remote repo (`git remote -v`)
 5.  Push the project to the Heroku remote (`git push heroku master`)
-6.  Set the environmental variables/confirg vars on heroku to- IP: 0.0.0.0, PORT: 5000 
-7.  Set the MONGO_URI environmental variable in the Heroku config vars 
+6.  Set the requisite environmental variables/confirg vars on heroku:
+*   AWS_ACCESS_KEY_ID (S3 Application)
+*   AWS_SECRET_ACCESS_KEY (S3 Application)
+*   DATABASE_URL (Provisioned Postgres Database)
+*   SECRET_KEY
+*   STRIPE_PUBLIC_KEY
+*   STRIPE_SECRET_KEY
+*   STRIPE_WH_SECRET
 8.  Restart all dynos.
 9.  Open the app on Heroku and check to ensure that it's working correctly.
 
