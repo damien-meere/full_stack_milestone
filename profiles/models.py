@@ -7,6 +7,7 @@ from django_countries.fields import CountryField
 
 import uuid
 
+
 class UserProfile(models.Model):
     """
     A user profile for maintaining default
