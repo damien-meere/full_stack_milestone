@@ -81,8 +81,32 @@ The structure of the database is as follows:
 
 ![Database Structure](documentation/database_structure_v3.jpg)
 
+### User & UserProfile Models
+Django’s authentication system provides the base structures for authorising, authenticating and accounts user interactions with the platform. The authentication system, bundled as 
+a Django contrib module in django.contrib.aut, handles user accounts, groups, permissions and cookie-based user sessions. This default implementation includes the User model out of 
+the box. User objects are the core of the authentication system. They represent the people interacting with the site and are used to facilitate things like access restrictions, user 
+registration etc. Within Django’s authentication framework, these user objects represent all users on the site - both Customer and Admin. 'Superusers' or admin 'staff' users 
+are just standard user objects with special attributes
 
-### User & UserProfile
+The primary attributes of the default user are:
+*   username
+*   password
+*   email
+*   first_name
+*   last_name
+*   staff status (added to differentiate access privilages)
+
+The UserProfile model is directly associated with a specific User object, and is used to maintaining default delivery information for that individual. This model maintains a One-to-One 
+relationship with it's associated User Object. On deletion of the referenced User object, the related UserProfile object is also deleted. The following fields provide all the information
+required to fulfil any orders that the user might make through the site. This is bound directly to the Order model as a Foreign Key.
+
+*   default_phone_number
+*   default_street_address1
+*   default_street_address2
+*   default_town_or_city
+*   default_county
+*   default_postcode
+*   default_country
 
 ### Subscriber List
 
