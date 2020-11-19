@@ -1,6 +1,8 @@
 # Damien Meere - BT Ireland
 ### Full Stack Frameworks with Django Milestone Project - Code Institute
 
+## Introduction
+
 This project website will highlight my capability to employ the various tools illustrated throughout the entirety of the Code Institute programme. The purpose of this project is to
 build a full-stack django-based site, with the requisite business logic to support all aspects of an online store. This django-enabled site allows an admin to create, store and 
 manipulate product records, which are then presented to the site visitors/customers. Customers can create their own profiles, view and sort all products depending on their requirements,
@@ -71,7 +73,7 @@ This project utilises the following technologies:
 9. [Stripe](https://stripe.com/ie) - Online payment processing platform
 10. [Postgres](https://www.postgresql.org/) - open source object-relational database system
 
-[Back to top](#table-of-contents)
+[Back to top](#Introduction)
 
 ## Current-Features
 
@@ -83,7 +85,7 @@ SKU Generator
 Inventory function
 Mailing List
 
-[Back to top](#table-of-contents)
+[Back to top](#Introduction)
 
 ## Future-Features
 
@@ -101,7 +103,7 @@ This site was tested across multiple browsers (Chrome, Safari, Firefox), and on 
 to ensure compatibility and responsiveness. As detailed in previous sections, depending on the screen size, elements will move and change size to ensure usability in unaffected by 
 the changes.
 
-[Back to top](#table-of-contents)
+[Back to top](#Introduction)
 
 ## Testing-Unresolved_Bugs
 
@@ -129,14 +131,14 @@ To deploy the project to Heroku you will need to do the following:
 4.  Ensure you have Heroku set up as a remote repo (`git remote -v`)
 5.  Push the project to the Heroku remote (`git push heroku master`)
 6.  Set the requisite environmental variables/confirg vars on heroku:
-*   AWS_ACCESS_KEY_ID (S3 Application)
-*   AWS_SECRET_ACCESS_KEY (S3 Application)
-*   DATABASE_URL (Provisioned Postgres Database)
-*   SECRET_KEY
-*   STRIPE_PUBLIC_KEY
-*   STRIPE_SECRET_KEY
-*   STRIPE_WH_SECRET
+    *   AWS_ACCESS_KEY_ID (S3 Application)
+    *   AWS_SECRET_ACCESS_KEY (S3 Application)
+    *   DATABASE_URL (Provisioned Postgres Database)
+    *   SECRET_KEY
+    *   STRIPE_PUBLIC_KEY
+    *   STRIPE_SECRET_KEY
+    *   STRIPE_WH_SECRET
 8.  Restart all dynos.
 9.  Open the app on Heroku and check to ensure that it's working correctly.
 
-[Back to top](#table-of-contents)
+[Back to top](#Introduction)
