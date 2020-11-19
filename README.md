@@ -13,10 +13,11 @@ Sqlite is a relational database management system (RDBMS) embedded within the ap
 employed as the Database to house all data. Postgres is an open source object-relational database management system. The data structures and associated applications modeals are 
 detailed in the [Database](#Database) section.
 
-Utilising Django and the DBMS highlighted above, site admins, 
+Utilising Django and the DBMS highlighted above, site admins, can access a customised Django-supported Admin Dashboard where they can Create, Read, Update and Delete records within the 
+various application models (Products, Users, Orders, Product Reviews etc.).
 
-
-
+Throughout the development of the project, [Git](https://git-scm.com/) & [Github](https://github.com/) were employed to support version control. The [Github Repository](https://github.com/damien-meere/full_stack_milestone) 
+for the project is linked directly to the [Heroku-deployed site](https://dmeere-thecomicstore.herokuapp.com/).
 
 
 ## Table of Contents
@@ -70,6 +71,8 @@ This project utilises the following technologies:
 9. [Stripe](https://stripe.com/ie) - Online payment processing platform
 10. [Postgres](https://www.postgresql.org/) - open source object-relational database system
 
+[Back to top](#table-of-contents)
+
 ## Current-Features
 
 Admin Portal - Django based
@@ -79,6 +82,8 @@ Shopping Bag + stripe
 SKU Generator
 Inventory function
 Mailing List
+
+[Back to top](#table-of-contents)
 
 ## Future-Features
 
@@ -96,6 +101,8 @@ This site was tested across multiple browsers (Chrome, Safari, Firefox), and on 
 to ensure compatibility and responsiveness. As detailed in previous sections, depending on the screen size, elements will move and change size to ensure usability in unaffected by 
 the changes.
 
+[Back to top](#table-of-contents)
+
 ## Testing-Unresolved_Bugs
 
 
@@ -105,6 +112,10 @@ A live iteration of this project can be found deployed to [Heroku](https://dmeer
 
 To run locally, you can clone this repository directly into the editor of your choice by pasting `git clone https://github.com/damien-meere/Data-Centric-Development-Milestone-Project.git` 
 into your terminal. To cut ties with this GitHub repository, type `git remote rm origin` into the terminal.
+
+>NOTE:
+>Ensure that when testing with the Stripe-supported payment system, utilise the [Stripe Testing](https://stripe.com/docs/testing#cards) details. 
+>Throughout the development of this project the followig details were utilised - Card number: 4242424242424242 (16-digit Card number), CVV & Date: Any digit combinations you wish.
 
 You can also Clone this Repository to GitHub Desktop, by navigating to the [main page](https://github.com/damien-meere/full_stack_milestone) of the 
 repository on GitHub, under the repository name, click Clone or download. Click Open in Desktop to clone the repository and open it in GitHub Desktop. Click Choose... and, 
@@ -121,3 +132,5 @@ To deploy the project to Heroku you will need to do the following:
 7.  Set the MONGO_URI environmental variable in the Heroku config vars 
 8.  Restart all dynos.
 9.  Open the app on Heroku and check to ensure that it's working correctly.
+
+[Back to top](#table-of-contents)
