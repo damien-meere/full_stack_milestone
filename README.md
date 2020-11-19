@@ -8,11 +8,11 @@ build a full-stack django-based site, with the requisite business logic to suppo
 manipulate product records, which are then presented to the site visitors/customers. Customers can create their own profiles, view and sort all products depending on their requirements,
 sign up for mailing lists, view the available inventory on products and leave reviews for products they have purchased. 
 
-All functionality relating to both site admins and customers is laid out within the User stories below. 
+All functionality relating to both site admins and customers is laid out within the [UX + User Stories](#UX+User-Stories) section below. 
 
 This project is built upon the Django framework and follows the model-template-view architecture pattern. Sqlite was utilised during development as the database for local testing.
 Sqlite is a relational database management system (RDBMS) embedded within the application itself. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/), Postgres is 
-employed as the Database to house all data. Postgres is an open source object-relational database management system. The data structures and associated applications modeals are 
+employed as the Database to house all data. Postgres is an open source object-relational database management system. The data structures and associated applications models are 
 detailed in the [Database](#Database) section.
 
 Utilising Django and the DBMS highlighted above, site admins, can access a customised Django-supported Admin Dashboard where they can Create, Read, Update and Delete records within the 
@@ -25,10 +25,9 @@ for the project is linked directly to the [Heroku-deployed site](https://dmeere-
 ## Table of Contents
 
 - [Demo](#Demo)
-- [Database](#Database)
 - [UX + User Stories](#UX+User-Stories)
-- [Technologies](#Technologies)
-- [Site Notes](#Site-Notes)
+- [Technologies](#Technologies-Used)
+- [Database](#Database)
 - [Current Features](#Current-Features)
 - [Future Features](#Future-Features)
 - [Testing](#Testing)
@@ -37,18 +36,9 @@ for the project is linked directly to the [Heroku-deployed site](https://dmeere-
 - [Internal Deployment](#Internal-Deployment)
 
 
-    
 ## Demo
 A live demo of the project can be found deployed to Heroku [Here](https://dmeere-thecomicstore.herokuapp.com/)
 
-    
-## Database
-![Database Structure](IMAGE TO BE PROVIDED)
-
-Describe Categories
-Describe Updated Products structure - Inventory
-Describe SubscriberList Structure and Reasoning
-Describe ProductReview Structure and Reasoning
 
 ## UX+User-Stories
 
@@ -56,10 +46,12 @@ Describe User Stories from Excel
 
 In particular highlight the Mailing list, Review and Inventory functions
 
-
+[Back to top](#Introduction)
     
-## Technologies
-This project utilises the following technologies:
+## Technologies Used
+
+#### Languages, Frameworks, Editors, Tools & Version Control:
+
 1. [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 2. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 3. [Javascript](https://www.w3schools.com/jsref/)
@@ -69,11 +61,27 @@ This project utilises the following technologies:
 6. [FontAwesome](https://fontawesome.com/) - Icons utilised throughout the site
 7. [Git](https://git-scm.com/) - Support of Version Control
 8. [Github](https://github.com/) - Host the repository of all previous versions of the build
-8. [Heroku](https://www.heroku.com/) - Cloud platform as a service enabling deployment 
-9. [Stripe](https://stripe.com/ie) - Online payment processing platform
-10. [Postgres](https://www.postgresql.org/) - open source object-relational database system
+9. [Gitpod](https://www.gitpod.io/) - Open-source prebuilt, collaborative development environments within your browser
+10. [Heroku](https://www.heroku.com/) - Cloud platform as a service enabling deployment 
+11. [Stripe](https://stripe.com/ie) - Online payment processing platform
+12. [Postgres](https://www.postgresql.org/) - open source object-relational database system
+13. [SQLite](www.sqlite.org) - light-weight relational database management system (RDBMS)
+
 
 [Back to top](#Introduction)
+
+## Database
+
+During the early development and later local testing of the application, [SQLite](www.sqlite.org) was utilised as the database management system embedded within the 
+application itself. This faciliated the early deployment of the User Registration and Authentication system through the django platform. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/) 
+on Heroku, [Postgres](https://www.postgresql.org/) was employed as the Database to house all data. Postgres is an open source object-relational database management system and is 
+installed as an add-on within the Heroku application.
+
+
+Describe Categories
+Describe Updated Products structure - Inventory
+Describe SubscriberList Structure and Reasoning
+Describe ProductReview Structure and Reasoning
 
 ## Current-Features
 
