@@ -49,6 +49,14 @@ Describe User Stories from Excel
 In particular highlight the Mailing list, Review and Inventory functions
 
 [Back to top](#Introduction)
+
+## Site Design
+
+Page breakdowns across the site.
+
+Defensive Design
+
+[Back to top](#Introduction)
     
 ## Technologies Used
 
@@ -127,6 +135,34 @@ choose to unsubscribe from the list, by un-ticking this button. This process is 
 
 ### Product
 
+The **Product** Model contains all details relating to the products being sold on the site. This model links to both the Order Line Item and the Product Review models as a Foreign Key.
+The Product model itself contains the Category field as a Foreign Key, which facilitaes the differentation of various products types from the main page search functionality. The other
+field within this model describe the product itself and it's status. For example, the SKU (Stock Keeping Unit) is product code that you can use to search and identify stock on hand 
+from lists, invoices, or order forms. It's typically used to facilitate inventory management. The Name, Description, Price and Image field allow customers to view information about 
+product before purchase. The has_sizes field is utilised to discern if a product is an item of clothing, and whether the customer should be able to pick the requisite size (S, M, L, XL etc.).
+The Ratings field is tied directly to the **Product_Review** model. The value in this field is calculated by getting the average of all review scores submitted by confirmed purchasers
+of the specific product. The Reviewing process will be discussed in more detail in the [Current Features](#Current-Features) section. Finally, the Stock_level Field is dtermined by 
+site admin. When the admin sets this value, the users are presented with a notification on the product detail page to highlight current stock levels. When the stock level drops to a 
+critical level, the customer is provided with a warning to promote the purchase. When the stock is exhausted (0 remaining), the ADD TO BAG button on the product detail page is removed.
+This prevents users from adding a prodcut to their shopping bag, when we no long have the product in stock.
+
+*   category
+*   sku
+*   name
+*   description
+*   has_sizes
+*   price
+*   rating
+*   stock_level
+*   image_url
+*   image
+
+**Product Admin Dashboard**
+![Product Admin Dashboard](documentation/SiteImages/Admin_Product.jpg)
+
+**Product Detail Admin**
+![Product Detail Admin](documentation/SiteImages/Admin_Product_Detail.jpg)
+
 ### Product Review
 
 ### Category
@@ -151,6 +187,7 @@ Mailing List
 
 ## Future-Features
 
+Stock Keeping System (utilising the SKU)
 
 ## Testing
 Validation against the User stories highlighted in previous sections was key. 
