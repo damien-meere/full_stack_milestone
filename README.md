@@ -170,11 +170,11 @@ submit a review for a prodcut. Even then, they can only provide a review for a p
 
 
 *   review_id
-*   user
-*   product
+*   user - plain text to present on product detail page
+*   product - Foreign Key, on delete (Cascade)
 *   rating
 *   review
-*   timestamp
+*   timestamp - present on product detail page
 
 **Product Review Admin**
 ![Product Review Admin](documentation/SiteImages/Admin_Product_Review.jpg)
