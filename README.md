@@ -157,13 +157,30 @@ This prevents users from adding a prodcut to their shopping bag, when we no long
 *   image_url
 *   image
 
-**Product Admin Dashboard**
-![Product Admin Dashboard](documentation/SiteImages/Admin_Product.jpg)
+**Product Admin**
+![Product Admin](documentation/SiteImages/Admin_Product.jpg)
 
 **Product Detail Admin**
 ![Product Detail Admin](documentation/SiteImages/Admin_Product_Detail.jpg)
 
 ### Product Review
+
+The **Product Review** Model is utilised to harness feedback from confirmed product purchasers. Only those users that have completed an order (accessible via their profile) can 
+submit a review for a prodcut. Even then, they can only provide a review for a prodcut that is associated with their Order.
+
+
+*   review_id
+*   user
+*   product
+*   rating
+*   review
+*   timestamp
+
+**Product Review Admin**
+![Product Review Admin](documentation/SiteImages/Admin_Product_Review.jpg)
+
+**Product Review Detail Admin**
+![Product Review Detail Admin](documentation/SiteImages/Admin_Product_Review_Detail.jpg)
 
 ### Category
 
