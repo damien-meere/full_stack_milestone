@@ -116,6 +116,15 @@ required to fulfil any orders that the user might make through the site. This is
 
 ### Subscriber List
 
+The **Subscriber List** Model facilitates the curation of all site users wishing to be part of the site's mailing list. The model maintains only the email address of users, as visitors
+to the site can either sign up anonymously (i.e. without a profile) via the home page, or by ticking the subscribe button within the Profile page (once logged in). Logged in users can also
+choose to unsubscribe from the list, by un-ticking this button. This process is described in greater detail in the [Current Features](#Current-Features) section.
+
+*   subscriber_id
+*   email
+
+![Subscriber List Admin](documentation/SiteImages/Admin_subscribe_List.jpg)
+
 ### Product
 
 ### Product Review
