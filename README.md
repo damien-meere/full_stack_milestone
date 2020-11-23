@@ -240,7 +240,20 @@ of the products within the Order.
 
 ### Order Line Item
 
+The **Order Line Item** Model prodvides the specific prodcut context for the Order Model. The Order Line Item is bound to the Order Model and the Product Model. Both Order and Product
+are Foreign Keys within the Order Line Item. When the user creates an order, the contents of their 'Shopping Bag' are iteratted over to create an individual Order Line Item instance,
+which details the requisite order number, the requisite product ID, the details of prodcut size where applicable (in the case of clothing) the quantity, and finally the total for that 
+particular line item, based on the aforementioned information. Within the Admin interface, the Order Line Items are visible within the output of the specific associated Order, as illustrated
+below.
 
+*   order = models.ForeignKey(Order
+*   product = models.ForeignKey(Product
+*   product_size
+*   quantity
+*   lineitem_total
+
+**Order Line Item Admin**
+![Order Line Item Admin](documentation/SiteImages/Admin_Order_Line_Item_Detail.jpg)
 
 ## Current-Features
 
