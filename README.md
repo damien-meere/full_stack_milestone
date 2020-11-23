@@ -95,7 +95,9 @@ The structure of the database is as follows:
 Django’s authentication system provides the base structures for authorising, authenticating and accounts user interactions with the platform. The authentication system, bundled as 
 a Django contrib module in django.contrib.auth, handles user accounts, groups, permissions and cookie-based user sessions. This default implementation includes the **User model** out of 
 the box. User objects are the core of the authentication system. They represent the people interacting with the site and are used to facilitate things like access restrictions, user 
-registration etc. Within Django’s authentication framework, these user objects represent all users on the site - both Customer and Admin. 'Superusers' or admin 'staff' users 
+registration etc. 
+
+Within Django’s authentication framework, these user objects represent all users on the site - both Customer and Admin. 'Superusers' or admin 'staff' users 
 are just standard user objects with special attributes. The Primary Key for a user is an assigned User ID.
 
 The primary attributes of the default user are:
@@ -140,6 +142,7 @@ The Product model itself contains the Category field as a Foreign Key, which fac
 field within this model describe the product itself and it's status. For example, the SKU (Stock Keeping Unit) is product code that you can use to search and identify stock on hand 
 from lists, invoices, or order forms. It's typically used to facilitate inventory management. The Name, Description, Price and Image field allow customers to view information about 
 product before purchase. The has_sizes field is utilised to discern if a product is an item of clothing, and whether the customer should be able to pick the requisite size (S, M, L, XL etc.).
+
 The Ratings field is tied directly to the **Product_Review** model. The value in this field is calculated by getting the average of all review scores submitted by confirmed purchasers
 of the specific product. The Reviewing process will be discussed in more detail in the [Current Features](#Current-Features) section. Finally, the Stock_level Field is dtermined by 
 site admin. When the admin sets this value, the users are presented with a notification on the product detail page to highlight current stock levels. When the stock level drops to a 
@@ -169,7 +172,9 @@ The **Product Review** Model is utilised to harness feedback from confirmed prod
 submit a review for a product. Even then, they can only provide a review for a prodcut that are associated with their Order. The process or creating and viewing product reviews 
 will be details in the [Current Features](#Current-Features) section. The various fields within the model support this function. The review_id field is utilised to uniquely identify
 each review record within the datebase. The user field identifies the user that submits the review. This detail is used to populate the review section within the Product Detail
-page. The Product field is a foreign key and associates the review with a specific product. On deletion of the product in question, all associated product reviews are deleted. The 
+page. 
+
+The Product field is a foreign key and associates the review with a specific product. On deletion of the product in question, all associated product reviews are deleted. The 
 review (Text input) and Timestamp (gathered at the time of submission - `datetime.now()`) are used to provide additional information on the Product detail page. The prodcut detail 
 page will tabulate the various reviews associated with the specific Product. Finally, the ratings field is just an integer value between 0-5. The user can select their input within a dropdown menu with submitting their review. The actual rating assigned to the Product
 object itself is actually the average of all submitted review scores. On successful submission of a review, the ratings score is averaged across all reviews for that product. The 
@@ -200,6 +205,38 @@ the store's inventory. The model is limited to two field that provide a name, an
 ![Category Admin](documentation/SiteImages/Admin_Category.jpg)
 
 ### Order
+
+The **Order** Model is one of the key models supporting the checkout application, and as such, the purchasing capability within the site. The Order Model is used to harness the various
+pieces of information required do fulfil a customers order (Delivery Information), harnessed from the User Profile (for logged in users).
+
+The Order model links directly to the UserProfile model (Foreign Key) and as such binds an order to a specific user profile. Order Model contains all the  The Order Model also details
+the various costs associated with an order (i.e. Delivery Cost, Order Total, Grand Total). These values are dependant on the associated Order Line Items (Detailed Below). The Stipe 
+Payment ID contains the identifier that can be matched against Stripe records to ensure payment has been received before processing the customers order and arranging for the delivery
+of the products within the Order.
+
+*   order_number
+*   user_profile = models.ForeignKey(UserProfile)
+*   full_name
+*   email
+*   phone_number
+*   country
+*   postcode
+*   town_or_city
+*   street_address1
+*   street_address2
+*   county
+*   date
+*   delivery_cost
+*   order_total
+*   grand_total
+*   original_bag
+*   stripe_pid
+
+**Order Admin**
+![Order Admin](documentation/SiteImages/Admin_Order.jpg)
+
+**Order Detail Admin**
+![Order Detail Admin](documentation/SiteImages/Admin_Order_Detail.jpg)
 
 ### Order Line Item
 
