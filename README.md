@@ -190,6 +190,15 @@ result is saved to the original Product Object rating field, as detailed above.
 
 ### Category
 
+The **Category** Model is utilised to provide additional context to the Products (Foreign key within Product Model). The categories are used to differentiate and group products within
+the store's inventory. The model is limited to two field that provide a name, and a "Friendly" version of that name
+
+*   name
+*   friendly_name
+
+**Category Admin**
+![Category Admin](documentation/SiteImages/Admin_Category.jpg)
+
 ### Order
 
 ### Order Line Item
