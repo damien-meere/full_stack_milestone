@@ -1,6 +1,8 @@
 # Damien Meere - BT Ireland
 ### Full Stack Frameworks with Django Milestone Project - Code Institute
 
+![The Comic Store](static/img/Comic-Store-Logo.png)
+
 ## Introduction
 
 This project website will highlight my capability to employ the various tools illustrated throughout the entirety of the Code Institute programme. The purpose of this project is to
