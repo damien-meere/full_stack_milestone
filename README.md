@@ -1,7 +1,11 @@
 # Damien Meere - BT Ireland
 ### Full Stack Frameworks with Django Milestone Project - Code Institute
 
-![The Comic Store](static/img/Comic-Store-Logo.png)
+<p align="center">
+    <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/static/img/Comic-Store-Logo.png" alt="Comic Store Logo">
+</p>
+
+
 
 ## Introduction
 
