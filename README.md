@@ -166,15 +166,21 @@ This prevents users from adding a prodcut to their shopping bag, when we no long
 ### Product Review
 
 The **Product Review** Model is utilised to harness feedback from confirmed product purchasers. Only those users that have completed an order (accessible via their profile) can 
-submit a review for a prodcut. Even then, they can only provide a review for a prodcut that is associated with their Order.
-
+submit a review for a product. Even then, they can only provide a review for a prodcut that are associated with their Order. The process or creating and viewing product reviews 
+will be details in the [Current Features](#Current-Features) section. The various fields within the model support this function. The review_id field is utilised to uniquely identify
+each review record within the datebase. The user field identifies the user that submits the review. This detail is used to populate the review section within the Product Detail
+page. The Product field is a foreign key and associates the review with a specific product. On deletion of the product in question, all associated product reviews are deleted. The 
+review (Text input) and Timestamp (gathered at the time of submission - `datetime.now()`) are used to provide additional information on the Product detail page. The prodcut detail 
+page will tabulate the various reviews associated with the specific Product. Finally, the ratings field is just an integer value between 0-5. The user can select their input within a dropdown menu with submitting their review. The actual rating assigned to the Product
+object itself is actually the average of all submitted review scores. On successful submission of a review, the ratings score is averaged across all reviews for that product. The 
+result is saved to the original Product Object rating field, as detailed above. 
 
 *   review_id
-*   user - plain text to present on product detail page
-*   product - Foreign Key, on delete (Cascade)
+*   user
+*   product
 *   rating
 *   review
-*   timestamp - present on product detail page
+*   timestamp
 
 **Product Review Admin**
 ![Product Review Admin](documentation/SiteImages/Admin_Product_Review.jpg)
