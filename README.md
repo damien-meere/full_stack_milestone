@@ -195,12 +195,15 @@ required size as illustrated below.
 
 ![Size Selector](documentation/SiteImages/size_selector.jpg)
 
-
-
 ####    View all items that I've selected to add to shopping bag
-Identify the total cost of all items in shopping bag
+Once a customer has selected (Added to their Bag) all products they wish to purchase, they need to be able to review this product list before proceeding to the payment. Therefore to fulfil this 
+user story, the customer can view a list of all products currently in their shopping bag by selevting the shopping cart icon in the top right of the site. Below this icon is the current total cost
+of all items in the bag. Once the users selects this button they are presented with a list of all items they've added.
 
 ####    Adjust quantities of items in shopping bag
+
+
+
 Quickly edit shopping bag before final purchase
 
 ####    Enter payment details
