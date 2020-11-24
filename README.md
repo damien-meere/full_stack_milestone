@@ -188,7 +188,14 @@ as when products are sorted or filtered from the navbar menu.
 
 ### Purchasing & Checkout
 ####    Select size (where applicable) and quantity of product for purchasing
-Ensure we can select the correct product and in the appropriate size
+Within the site certain items, typically clothing, require input from the user to select the requisite sixe (Small, medium, Large, Extra-Large etc.) Where appropriate, customers preference  with regards
+the item size needs to be harnessed. Within the Product management menu (available to superusers), and the Django admin portal, Site Admins can create/edit products. When they do, the admin has the 
+option to determine whether the product "Has Sizes". If the Admin user responds with a Yes, when a customer accesses the specific Product detail page, they are presented with an option to select the 
+required size as illustrated below.
+
+![Size Selector](documentation/SiteImages/size_selector.jpg)
+
+
 
 ####    View all items that I've selected to add to shopping bag
 Identify the total cost of all items in shopping bag
