@@ -222,7 +222,9 @@ the order, the Delivery address, and the breakdown of the associated charges as 
 ![Order Confirmation](documentation/SiteImages/Order_Confirmation.jpg)
 
 ####    Receive Email confirmation after completing purchase
-Allow users to maintain confirmations of their purchases
+it's important that customers are able to maintain records of their purchases off the site. To fulfil this user story, when an order is successfully processed, an email copy of the order confirmation
+is also emailed to the customer.
+
 
 ####    Provide Review and Rating of products purchased
 Allow other customers to review comments and ratings supplied by other customers
