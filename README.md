@@ -5,8 +5,6 @@
     <img height="200" src="https://github.com/damien-meere/full_stack_milestone/blob/master/static/img/Comic-Store-Logo.png" alt="Comic Store Logo">
 </p>
 
-
-
 ## Introduction
 
 This project website will highlight my capability to employ the various tools illustrated throughout the entirety of the Code Institute programme. The purpose of this project is to
@@ -50,7 +48,19 @@ A live demo of the project can be found deployed to Heroku [Here](https://dmeere
 
 ## UX+User-Stories
 
-Describe User Stories from Excel
+The goal of project was to build a full-stack site with the business logic to support the sale of products to customers/site visitors. In this case,
+the site supports a comic book store's online presence. The main actors involved in the site are customers (both logged in and anonymous), and the 
+site admin. The various interations with the site can be broken out into 5 key domains:
+*   Product View & Navigation
+*   Registration and Individual User Account Functionality
+*   Sort & Search of Products
+*   Purchasing & Checkout
+*   Admin & Product Management
+
+The checklist used to track the user stories can be accessed here - ![Checklist](documentation/user_stories_models_v2.xlsx)
+
+
+
 
 In particular highlight the Mailing list, Review and Inventory functions
 
@@ -329,3 +339,9 @@ To deploy the project to Heroku you will need to do the following:
 9.  Open the app on Heroku and check to ensure that it's working correctly.
 
 [Back to top](#Introduction)
+
+###### <i>Disclaimer: This project (Milestone 4) was created for educational purposes as part of the Code Institute's Full Stack Software Development Course.</i>
+
+<p align="center">
+    <img height="150" src="https://github.com/damien-meere/full_stack_milestone/blob/master/static/img/Comic-Store-Logo.png" alt="Comic Store Logo">
+</p>
