@@ -101,9 +101,37 @@ users can filter their product view on:
 
 
 ### Registration and Individual User Account Functionality
+####    Register for an account
+####    Login/Logout
+####    Option to use social media accounts to complete registration
+####    Recover password if necessary
+####    Email confirmation with registration
+####    Up to date personalised account
+####    Mailing List
+
+
 ### Sort & Search of Products
+####    Sort products into an appropriate order
+####    Sort products into categories
+####    Search for products by name or description
+####    Easily view search results
+
+
 ### Purchasing & Checkout
+####    Select size (where applicable) and quantity of product for purchasing
+####    View all items that I've selected to add to shopping bag
+####    Adjust quantities of items in shopping bag
+####    Enter payment details
+####    View order confirmations
+####    Receive Email confirmation after completing purchase
+####    Provide Review and Rating of products purchased
+
+
 ### Admin & Product Management
+####    Add products
+####    Edit/update existing products
+####    Delete products
+####    Update inventory number for item
 
 
 In particular highlight the Mailing list, Review and Inventory functions
