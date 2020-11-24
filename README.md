@@ -49,17 +49,34 @@ A live demo of the project can be found deployed to Heroku [Here](https://dmeere
 ## UX+User-Stories
 
 The goal of project was to build a full-stack site with the business logic to support the sale of products to customers/site visitors. In this case,
-the site supports a comic book store's online presence. The main actors involved in the site are customers (both logged in and anonymous), and the 
-site admin. The various interations with the site can be broken out into 5 key domains:
+the site supports a comic book store's online presence. The main actors involved in the site are **customers** (both logged in and anonymous), and the 
+**site admin**. The various interations with the site can be broken out into 5 key domains:
 *   Product View & Navigation
 *   Registration and Individual User Account Functionality
 *   Sort & Search of Products
 *   Purchasing & Checkout
 *   Admin & Product Management
 
-The checklist used to track the user stories can be accessed here - ![Checklist](documentation/user_stories_models_v2.xlsx)
+The checklist used to track the user stories can be accessed here - ![Checklist - Excel](documentation/user_stories_models_v2.xlsx)
+
+### Product View & Navigation
+####    View products
+All site users need to be able to identify items for purchase on the site with minimal effort. The need to be able to easily navigate to a central
+respoitory and view all available products, and view high level information relating to each product (Name, Image, Price, Rating).
+####    View individual product details
+All site users need to be able to focus in and delve into more specific details relating to a particular product - price, product description, 
+applicable sizes for clothing, images Inventory Availability, Ratings and Product Reviews. All of this information is in place to attract the customer
+and promote the purchase of the product.
+####    View categories of products
+####    Identify any clearence items or available discounts
+####    View total for all queued items for purchase
+####    View Inventory Status of a product
 
 
+### Registration and Individual User Account Functionality
+### Sort & Search of Products
+### Purchasing & Checkout
+### Admin & Product Management
 
 
 In particular highlight the Mailing list, Review and Inventory functions
