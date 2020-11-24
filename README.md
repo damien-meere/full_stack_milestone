@@ -127,21 +127,28 @@ specific product. As shown below, the inventory levels are reflected, so as to p
 
 ### Registration and Individual User Account Functionality
 ####    Register for an account
-Create and view individual profile
+In order for customers to build a relationship with the site, they need to be able to create an account on the site. Having an individual user account
+enables the user to save their details, so that when accessing the site in future, their details are already saved. This makes it easier for the user
+to complete purchases, and so drives additional business. 
 
+As detailed in the upcoming [Database](#Database) section, Django’s out-of-the-box authentication system provides the base structures for authorising, authenticating and accounting for all
+user interactions with the platform. The authentication system is bundled within the Django contrib module in django.contrib.auth. This handles the creation of user accounts, 
+facilitation of permissions and cookie-based user sessions.
 
 ####    Login/Logout
-Access personal account information
-
-
-####    Option to use social media accounts to complete registration
-Enable quick hassle free user registration
+Site users need to be able to login and logout as they need to (e.g. shared devices). Again, building on the Django Authentication system, once a user account has been created, 
+the users can very easily logout via the 'My Account' button on the navigation bar. So at any point on the site, the user can log out. 
 
 ####    Recover password if necessary
-Easily recoverable user profile
+Site Users should be able to reset/recover their password should they need to. Again, the benefit of building this site on a robust platform like 
+Django, is that the out-of-the-box authentication handles this functionality. Should the user require it, the authentication system will enable the user
+to supply their email address and have they'll receive an e-mail allowing them to reset it.
 
 ####    Email confirmation with registration
-Verify successful registration
+It's important that the site have accurate email address information for all users. As we saw in the previous section, when resetting an account password,
+when completing an Order and receiving the Order confirmation, the user email address is required to faciliate any communications with the user. Therefore,
+when creating a new account, in order to finalise the account creation, the user is required to supply an email address. The user receives an email with
+a link to verify their account and confirm their new account on the site. Until their email is verified, they cannot access their account. 
 
 ####    Up to date personalised account
 View order history, order confirmations & update payment details
