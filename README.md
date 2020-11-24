@@ -127,39 +127,81 @@ specific product. As shown below, the inventory levels are reflected, so as to p
 
 ### Registration and Individual User Account Functionality
 ####    Register for an account
+Create and view individual profile
+
+
 ####    Login/Logout
+Access personal account information
+
+
 ####    Option to use social media accounts to complete registration
+Enable quick hassle free user registration
+
 ####    Recover password if necessary
+Easily recoverable user profile
+
 ####    Email confirmation with registration
+Verify successful registration
+
 ####    Up to date personalised account
+View order history, order confirmations & update payment details
+
 ####    Mailing List
+Enable the user to sign up or opt out of the mialing list (both anonymous and sign up users
+
 
 
 ### Sort & Search of Products
 ####    Sort products into an appropriate order
+Easily identify requisite products based on chosen criteria
+
 ####    Sort products into categories
+Identify best priced in a category, sort by name etc.
+
 ####    Search for products by name or description
+Find specific product for purchase
+
 ####    Easily view search results
+Quickly identify products that fit our requirements
+
 
 
 ### Purchasing & Checkout
 ####    Select size (where applicable) and quantity of product for purchasing
+Ensure we can select the correct product and in the appropriate size
+
 ####    View all items that I've selected to add to shopping bag
+Identify the total cost of all items in shopping bag
+
 ####    Adjust quantities of items in shopping bag
+Quickly edit shopping bag before final purchase
+
 ####    Enter payment details
+Make checkout as hassle free as possible to ensure customers complete their purchases
+
 ####    View order confirmations
+Verify the my order has been correctly processed
+
 ####    Receive Email confirmation after completing purchase
+Allow users to maintain confirmations of their purchases
+
 ####    Provide Review and Rating of products purchased
+Allow other customers to review comments and ratings supplied by other customers
+
 
 
 ### Admin & Product Management
 ####    Add products
+Add new products to site
+
 ####    Edit/update existing products
+Change details of existing products
+
 ####    Delete products
+Remove products no longer for sale on the site
+
 ####    Update inventory number for item
-
-
-In particular highlight the Mailing list, Review and Inventory functions
+Add warning when stock drops below a certain level, only applow users to purchase items in stock
 
 [Back to top](#Introduction)
 
