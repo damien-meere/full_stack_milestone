@@ -112,8 +112,18 @@ Customers need to be able to keep track of the total cost of all items they're a
 customers must be able to see at all times what charges they can expect, including any delivery charges. This user story is fulfilled though the use
 of the shopping bag placeholder in the navbar (top right of page). At all times, this figure is updated based on the input of the user.
 
+![Shopping Bag Total](documentation/SiteImages/Shopping_Bag_Total.jpg)
+
 ####    View Inventory Status of a product
-It's important that when purchasing a product, Customers can be assured that their order can be fulfilled. With that in mind, When customers view the 
+It's important that when purchasing a product, Customers can be assured that their order can be fulfilled. With that in mind, when customers view the
+details for a specific product, when they go to add the product to their shopping bag, they are presented with a view of the inventory level for that
+specific product. As shown below, the inventory levels are reflected, so as to promote the completion of purchases.
+
+![Inventory Level - In stock](documentation/SiteImages/Inventory_Level3.jpg)
+
+![Inventory Level - Low stock](documentation/SiteImages/Inventory_Level1.jpg)
+
+![Inventory Level - Out of stock](documentation/SiteImages/Inventory_Level2.jpg)
 
 ### Registration and Individual User Account Functionality
 ####    Register for an account
