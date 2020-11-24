@@ -95,10 +95,12 @@ users can filter their product view on:
     *   Deals
     *   Clearence
 
+![Category Menu](documentation/SiteImages/Categories_Menu.jpg)
+
 ####    Identify any clearence items or available discounts
 As with all online stores, the primary goal is to drive business, and push customers to complete purchases. With that in mind, it's very important that customers can easily identify and take advantage
 of offers/deals, and gain access to any price reductions across the site. In order to fulful this user story, the Special offers menu option was added, as detailed above. The Categories that fall under
-this seciton heading are
+this seciton heading are as follows:
 *   New arrrivals
 *   Deals
 *   Clearence
@@ -106,9 +108,12 @@ this seciton heading are
 By filtering the product list on on these categories, users can quickly identify priced reduced items. As such, it increases the chances of customers adding these items to their shopping bag.
 
 ####    View total for all queued items for purchase
+Customers need to be able to keep track of the total cost of all items they're added to their shopping bag during a session. With each item that's added,
+customers must be able to see at all times what charges they can expect, including any delivery charges. This user story is fulfilled though the use
+of the shopping bag placeholder in the navbar (top right of page). At all times, this figure is updated based on the input of the user.
 
 ####    View Inventory Status of a product
-
+It's important that when purchasing a product, Customers can be assured that their order can be fulfilled. With that in mind, When customers view the 
 
 ### Registration and Individual User Account Functionality
 ####    Register for an account
