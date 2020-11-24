@@ -151,10 +151,15 @@ when creating a new account, in order to finalise the account creation, the user
 a link to verify their account and confirm their new account on the site. Until their email is verified, they cannot access their account. 
 
 ####    Up to date personalised account
-View order history, order confirmations & update payment details
+One of the reasons for needing a profile is to maintain user information, so that users can view a history of their purchases, view order confirmations,
+manage their delivery information. This user story is faciliated within the User's own profile page which enables the user to supply/update their 
+delivery information, and view all previous orders.
 
 ####    Mailing List
-Enable the user to sign up or opt out of the mialing list (both anonymous and sign up users
+It's important that stores cultivate a relationship with their customers. One good way of doing this is the creation of a mailing list, that enables
+the store to circulate details of upcoming product releases, Price reductions, Ongoing Deals, Upcoming events etc. Within this site, this user story
+is facilitated through two mechanims. Anonymous users (with no Profile), can sign up to be a part of the mailing list via the mailing list button on
+the home page. Customers with a registered account can elect to join the mailing list via their profile page, where they cna check the checkbox to join.
 
 
 
