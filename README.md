@@ -165,7 +165,9 @@ the home page. Customers with a registered account can elect to join the mailing
 
 ### Sort & Search of Products
 ####    Sort products into an appropriate order
-Easily identify requisite products based on chosen criteria
+As highlighted in previous user stories, central to any eConmmerce site is the capability to effectively sort and filter product lists so as to easily identify requisite products based on chosen 
+criteria. To facilitate this capability, within the navbar, the site users have the option of sorting all products according to Price, Rating or Category. They can also view just the chosen category
+of Products by selecting the requsite Category from the navbar, and details in the [View Category](#View-categories-of-products) user story.
 
 ####    Sort products into categories
 Identify best priced in a category, sort by name etc.
