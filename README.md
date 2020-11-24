@@ -222,12 +222,19 @@ the order, the Delivery address, and the breakdown of the associated charges as 
 ![Order Confirmation](documentation/SiteImages/Order_Confirmation.jpg)
 
 ####    Receive Email confirmation after completing purchase
-it's important that customers are able to maintain records of their purchases off the site. To fulfil this user story, when an order is successfully processed, an email copy of the order confirmation
+It's important that customers are able to maintain records of their purchases off the site. To fulfil this user story, when an order is successfully processed, an email copy of the order confirmation
 is also emailed to the customer.
 
 
 ####    Provide Review and Rating of products purchased
-Allow other customers to review comments and ratings supplied by other customers
+Within eCommerce sites, user feedback is essential to building confidence in your service. Customer feedback in the form of reviews and product ratings are essential components in building this confidence.
+To fulfil this user story, if a user has completed an order, they have an opportunity to review the products from that order. Within the customers profile page, all orders associated with that user account
+are presented. The customer can select the order number to view specific information about each other. Within the Order details, the customer can elect to leave a review as illustrated below. The Product
+Review page allows the user to provide a review for only the products that were within the Order. They can select a rating (between 0 - 5), and a text input.
+
+![Prodcut Review](documentation/SiteImages/product_review.jpg)
+
+This information is appended to the specific product's detail page, and is used to inform the other customers and promote purchases. More information on this feature is contained within the [Current Features](#Current-Features) section.
 
 
 
