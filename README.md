@@ -210,12 +210,16 @@ reflect the new order details, before the user proceeds to the payment.
 As with any eCommerce site, the customers need to be able to complete the purchase of their chosen items. And again, the process of gathering the payment information and completing the transation 
 needs to be as hassle free as possible to ensure customers have no reason to leave. Once the customer has reviews their shopping bag and selected the 'Secure Checkout' button, they are brought to 
 the Checkout page. It's here that this user story is fulfilled. If the user has a profile, their delivery information may already be populated. However, at the botton of the screen, the user can 
-input their credit card details. This Card processing functionality is supported by [Stripe](https://stripe.com/ie), an online payment processing platform.
+input their credit card details, as illustrated below. This card processing functionality is supported by [Stripe](https://stripe.com/ie), an online payment processing platform.
 
 ![Payment Details](documentation/SiteImages/payment_details.jpg)
 
 ####    View order confirmations
-Verify the my order has been correctly processed
+Once a customer entered their card details and elected to proceed with a purchase, they need to be given all details related to the Order to ensure there are no discrepancies. Therefore, to fulfill
+this user story, on completion of an Order payment, the customer is presented with a complete breakdown of the processed Order. This Order confirmation contains details of the products included in 
+the order, the Delivery address, and the breakdown of the associated charges as illustrated below:
+
+![Order Confirmation](documentation/SiteImages/Order_Confirmation.jpg)
 
 ####    Receive Email confirmation after completing purchase
 Allow users to maintain confirmations of their purchases
