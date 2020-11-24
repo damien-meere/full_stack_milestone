@@ -201,13 +201,18 @@ user story, the customer can view a list of all products currently in their shop
 of all items in the bag. Once the users selects this button they are presented with a list of all items they've added.
 
 ####    Adjust quantities of items in shopping bag
-
-
-
-Quickly edit shopping bag before final purchase
+Once a user has gotten to the point of adding products to their shopping bag, it needs to be as easy as possible to proceed with a purchase. To ensure that customers can proceed to the payment phase 
+without issue, they need to be able to edit the contents of their bag, right up until we begin processing their payment. To facilite this user story, within the shoping bag, custerms have the opportunity
+to edit the contents of the bag. Either deleting items, or adjusting the quantity field of the item before proceeding. When they update their order quantities, the Grand Total value is updated to 
+reflect the new order details, before the user proceeds to the payment.
 
 ####    Enter payment details
-Make checkout as hassle free as possible to ensure customers complete their purchases
+As with any eCommerce site, the customers need to be able to complete the purchase of their chosen items. And again, the process of gathering the payment information and completing the transation 
+needs to be as hassle free as possible to ensure customers have no reason to leave. Once the customer has reviews their shopping bag and selected the 'Secure Checkout' button, they are brought to 
+the Checkout page. It's here that this user story is fulfilled. If the user has a profile, their delivery information may already be populated. However, at the botton of the screen, the user can 
+input their credit card details. This Card processing functionality is supported by [Stripe](https://stripe.com/ie), an online payment processing platform.
+
+![Payment Details](documentation/SiteImages/payment_details.jpg)
 
 ####    View order confirmations
 Verify the my order has been correctly processed
