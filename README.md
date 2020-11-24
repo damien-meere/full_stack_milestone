@@ -32,6 +32,7 @@ for the project is linked directly to the [Heroku-deployed site](https://dmeere-
 
 - [Demo](#Demo)
 - [UX + User Stories](#UX+User-Stories)
+- [Site Design](#Site-Design)
 - [Technologies](#Technologies-Used)
 - [Database](#Database)
 - [Current Features](#Current-Features)
@@ -61,13 +62,39 @@ The checklist used to track the user stories can be accessed here - ![Checklist 
 
 ### Product View & Navigation
 ####    View products
-All site users need to be able to identify items for purchase on the site with minimal effort. The need to be able to easily navigate to a central
-respoitory and view all available products, and view high level information relating to each product (Name, Image, Price, Rating).
+All site users need to be able to identify items for purchase on the site with minimal effort. They need to be able to easily navigate to a central
+respoitory and view all available products, and view high level information relating to each product (Name, Image, Price, Rating). This requirement is
+fulfulled within the Main Product Page which presents a view of the Product catalogue. The design of this main product page will be presented and 
+discussed in the upcoming section - [Site Design](#Site-Design).
 ####    View individual product details
 All site users need to be able to focus in and delve into more specific details relating to a particular product - price, product description, 
-applicable sizes for clothing, images Inventory Availability, Ratings and Product Reviews. All of this information is in place to attract the customer
-and promote the purchase of the product.
+applicable sizes for clothing, Product Images, Inventory Availability, Ratings and Product Reviews. All of this information is in place to attract the 
+customer and promote the purchase of the product. This functionality Again, the design of the product detail page will be disucssed within the Site Design Section.
 ####    View categories of products
+It's hugely important that site users are able to filter the list of avilable products. In many cases with these types of sites, there can be a 
+substantial list of products available. Therefore, users need to be able to narrow the search parameters and limit their view of available products to
+the general area of interest. In this case, this user story is fulfulled throught the assingment of categories to the individual products. This is detailed in the [Database](#Database), where the 
+Product is presented in detail. The Categories, and their associated menu times enable the site users to select the type of product they wish to view. The following are the categories that site 
+users can filter their product view on:
+*   All products 
+    *   Arranged by Price, 
+    *   Arranged byRatings,
+    *   Arranged by Category,
+*   Books
+    *   Comics
+    *   Graphic Novels
+    *   Magazines
+*   Games
+    *   Board Games
+    *   Card Games
+*   Apparel
+    *   Hats
+    *   Shirts
+*   Special Offers
+    *   New arrrivals
+    *   Deals
+    *   Clearence
+
 ####    Identify any clearence items or available discounts
 ####    View total for all queued items for purchase
 ####    View Inventory Status of a product
