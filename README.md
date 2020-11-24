@@ -232,7 +232,7 @@ To fulfil this user story, if a user has completed an order, they have an opport
 are presented. The customer can select the order number to view specific information about each other. Within the Order details, the customer can elect to leave a review as illustrated below. The Product
 Review page allows the user to provide a review for only the products that were within the Order. They can select a rating (between 0 - 5), and a text input.
 
-![Prodcut Review](documentation/SiteImages/product_review.jpg)
+![Product Review](documentation/SiteImages/product_review.jpg)
 
 This information is appended to the specific product's detail page, and is used to inform the other customers and promote purchases. More information on this feature is contained within the [Current Features](#Current-Features) section.
 
