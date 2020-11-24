@@ -96,7 +96,17 @@ users can filter their product view on:
     *   Clearence
 
 ####    Identify any clearence items or available discounts
+As with all online stores, the primary goal is to drive business, and push customers to complete purchases. With that in mind, it's very important that customers can easily identify and take advantage
+of offers/deals, and gain access to any price reductions across the site. In order to fulful this user story, the Special offers menu option was added, as detailed above. The Categories that fall under
+this seciton heading are
+*   New arrrivals
+*   Deals
+*   Clearence
+
+By filtering the product list on on these categories, users can quickly identify priced reduced items. As such, it increases the chances of customers adding these items to their shopping bag.
+
 ####    View total for all queued items for purchase
+
 ####    View Inventory Status of a product
 
 
@@ -358,6 +368,8 @@ Mailing List
 ## Future-Features
 
 Stock Keeping System (utilising the SKU)
+Price Reduction notifications
+Complete Order on items with no stock - Added to back order or Opt out of purchase
 
 ## Testing
 Validation against the User stories highlighted in previous sections was key. 
