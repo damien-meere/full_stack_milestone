@@ -125,6 +125,7 @@ specific product. As shown below, the inventory levels are reflected, so as to p
 
 ![Inventory Level - Out of stock](documentation/SiteImages/Inventory_Level2.jpg)
 
+
 ### Registration and Individual User Account Functionality
 ####    Register for an account
 In order for customers to build a relationship with the site, they need to be able to create an account on the site. Having an individual user account
@@ -158,25 +159,30 @@ delivery information, and view all previous orders.
 ####    Mailing List
 It's important that stores cultivate a relationship with their customers. One good way of doing this is the creation of a mailing list, that enables
 the store to circulate details of upcoming product releases, Price reductions, Ongoing Deals, Upcoming events etc. Within this site, this user story
-is facilitated through two mechanims. Anonymous users (with no Profile), can sign up to be a part of the mailing list via the mailing list button on
+is facilitated through two mechanisms. Anonymous users (with no Profile), can sign up to be a part of the mailing list via the mailing list button on
 the home page. Customers with a registered account can elect to join the mailing list via their profile page, where they cna check the checkbox to join.
 
 
 
 ### Sort & Search of Products
 ####    Sort products into an appropriate order
-As highlighted in previous user stories, central to any eConmmerce site is the capability to effectively sort and filter product lists so as to easily identify requisite products based on chosen 
-criteria. To facilitate this capability, within the navbar, the site users have the option of sorting all products according to Price, Rating or Category. They can also view just the chosen category
-of Products by selecting the requsite Category from the navbar, and details in the [View Category](#View-categories-of-products) user story.
+As highlighted in previous user stories, central to any eCommerce site is the capability to effectively sort product lists so as to easily identify requisite products based on chosen 
+criteria. To facilitate this capability, within the navbar, the site users have the option of sorting all products according to Price, Rating or Category. 
 
 ####    Sort products into categories
-Identify best priced in a category, sort by name etc.
+Site users need to be able to quickly locate the products they require. the longer it takes a user to find what they want, the more likely it is that they will take their business elsewhere. Therefore
+to facilitate easier filtering of products, users can limit their view of products within the specific categories as detailed in the [View Category](#View-categories-of-products) user story. They can
+simply select the requisite category from the navbar.
 
 ####    Search for products by name or description
-Find specific product for purchase
+Customers may have more specific criteria that they are searching for. So rather then just relying on broad categorys to try and isolate the requisite product, customers can specifically input their
+own search parameters to either identify a single product, or zone in on a number of products that match the users inputted search criteria. This user story is faciliated via the search field within
+the sites nav bar. When the user inputs their parameters, the Name and Description field of each product is queried. If any products match that criteria, they are presented to the user.
 
 ####    Easily view search results
-Quickly identify products that fit our requirements
+Search parameters entered by a user can return a broad range of results, depending on the criteria entered. Therefore depending on the results, users must still be presented with a suitbale view to 
+peruse through the resultant list of products. This user story is fulfilled within the site as when the user inputs a search parameter, the results are presented to the user in the exact same format
+as when products are sorted or filtered from the navbar menu.
 
 
 
