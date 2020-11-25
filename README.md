@@ -93,17 +93,17 @@ users can filter their product view on:
 *   Special Offers
     *   New arrrivals
     *   Deals
-    *   Clearence
+    *   Clearance
 
 ![Category Menu](documentation/SiteImages/Categories_Menu.jpg)
 
-####    Identify any clearence items or available discounts
+####    Identify any clearance items or available discounts
 As with all online stores, the primary goal is to drive business, and push customers to complete purchases. With that in mind, it's very important that customers can easily identify and take advantage
 of offers/deals, and gain access to any price reductions across the site. In order to fulful this user story, the Special offers menu option was added, as detailed above. The Categories that fall under
 this seciton heading are as follows:
 *   New arrrivals
 *   Deals
-*   Clearence
+*   Clearance
 
 By filtering the product list on on these categories, users can quickly identify priced reduced items. As such, it increases the chances of customers adding these items to their shopping bag.
 
@@ -240,16 +240,27 @@ This information is appended to the specific product's detail page, and is used 
 
 ### Admin & Product Management
 ####    Add products
-Add new products to site
+The site admin needs to be able to easily add new products to the store's catalogue. This user story is fulfilled through two mechanisms. Firstly, when we create the Product Model, as discussed in the
+upcoming [Product](#Product) section, the Django platform enables us to interact with the model through the Adminstration portal. However, registered suerusers also have the capability of adding products
+though the site frontend. For Superusers, within the navbar, When the user selects 'My Account', they are presented with the option of 'Product Management'. This leads to an empty form, that contains
+all the requisite fields to create a new product object (Name, Description, has Sizes, Price, Stock Level, Image etc.).
 
 ####    Edit/update existing products
-Change details of existing products
+Just as important as adding new products is the capability of editing/updating products details. Over the lifetime of a products numerous details may be required to change. For example, the price of 
+a product is regularly up for alteration, and in the case of significant proce drops, the category may need to be changed to 'Clearance'. Again, this user story can be fulfilled via the back-end admin
+interface, or through the product 'Edit' link, visible to all designated superusers while navigating the site.
 
 ####    Delete products
-Remove products no longer for sale on the site
+Site Admins very often require the capability to remove products no longer for sale on the site. Just as with the two previous User stories, superusers can elect to use the delete button, visible on
+each product (Main Product page and Product Detail pages), or through the Django Admin Interface. 
 
-####    Update inventory number for item
-Add warning when stock drops below a certain level, only applow users to purchase items in stock
+####    Update inventory number for items
+Finally, one of the core features of the site, is the Inventory tracking system. Each time a user completes and order, the stock count is deprecated by that amount. As the stock level decreases, 
+a stock warning becomes visible on the Product Detail page. This calls out when the stock level is critical, and when the stock is depleted. Once the stock is depleted, the 'Add to Bag' button is 
+disabled, so the customers cannot add the product to an order, that the store can't fulfil (As illustrated in the [View Inventory Status of a product](#view-inventory-status-of-a-product) section). Therefore, when a product is back in stock, the superuser needs to be able to update the stock level for
+that specific product, and as such, re-enable the 'Add to Bag' button on that Prodcut. As with the above user stories, this functionality can be accessed either by selecting the 'Edit' button on a 
+particular product, or indeed accessing the Product object from the Django Admin Interface. the 
+
 
 [Back to top](#Introduction)
 
