@@ -261,12 +261,27 @@ disabled, so the customers cannot add the product to an order, that the store ca
 that specific product, and as such, re-enable the 'Add to Bag' button on that Prodcut. As with the above user stories, this functionality can be accessed either by selecting the 'Edit' button on a 
 particular product, or indeed accessing the Product object from the Django Admin Interface. the 
 
-
 [Back to top](#Introduction)
 
 ## Site Design
 
-Page breakdowns across the site.
+Wireframing and Implemented Functionality + Page breakdowns across the site.
+
+General Site Navigation
+    Large Screens
+    Mobile Screens
+Landing Page
+Product Page
+Product Detail
+Shopping Bag
+Checkout Page
+Completed Order
+Profile
+Order View
+Product Review
+Product Management
+
+Django Admin Interface
 
 Defensive Design
 
