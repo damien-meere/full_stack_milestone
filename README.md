@@ -288,7 +288,7 @@ below:
 To demonstrate the responsive design of the site, the following illustrates the appearence of the site navigation within smaller screens. The First image illustrates the look of the menu once
 compounded to fit small screens. The second image illustrates the expansion of the navigation menu:
 
-![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu.jpg)
+![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu2.jpg)
     
 ### Landing Page
 ### Product Page
