@@ -298,6 +298,13 @@ The following image illustrates the expansion of the navigation menu. Again this
 ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu2.jpg)
     
 ### Landing Page
+The landing page is a simple page to welcome to the users to the site. The purpose of this page is to direct the customers attention towards the navigation elements, and enable them to quickly
+familiarise themselves with the structure of the site. From the landing page, the customers may utilise the navigation functionality to view filtered lists of products, or they may elect to follow
+the 'Lets Get Started' button, which brings the customer to the 'All Products' view (no filters). from the landing page, the customer may also register for a profile, or login to a previously 
+created profile.
+
+![Landing Page](documentation/SiteImages/landing_page.jpg)
+
 ### Product Page
 ### Product Detail
 ### Shopping Bag
