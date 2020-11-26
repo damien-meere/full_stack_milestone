@@ -270,34 +270,36 @@ Wireframing and Implemented Functionality + Page breakdowns across the site.
 
 ### General Site Navigation
 The site navigation functionality is all built into the base.html parent template. This contains all default components that all other templates inherit from. All the templates discussed within
-this section extend the base template. The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the components,
-i.e. the navigation bar, is inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
+this section extend the base template. The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the 
+components, i.e. the navigation bar, is inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
 
-The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. As illustrated below, you can see that on larger screens, the full
-navigation bar is visible with all conponents (Anonymous User - Not Logged In). The various site navigation links allow customers to view of products within the specific categories as detailed 
-in the [View Category](#View-categories-of-products) user story. The appearence of the navbar on Large screens is illustrated below. In this view, we can also see the additional components visible
-to anonymous users:
+The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. The site navigation links within the navbar remain consistant, 
+however, the other functions change depending on whether the site visitor is logged in or not, or whether they're a superuser or not. As illustrated below, you can see that on larger screens, 
+the full navigation bar is visible with all conponents (Anonymous User - Not Logged In). The various site navigation links allow customers to view of products within the specific categories 
+as detailed in the [View Category](#View-categories-of-products) user story. Under the 'My Account' Button, users have the options to Register or Login. The appearence of the navbar on large 
+screens is illustrated below. In this view, we can also see the additional components visible to anonymous users:
 ![Navigation Large Screen- Anonymous](documentation/SiteImages/Navigation_Large.jpg)
 
+Once a user is logged in, the 'Mailing List Sign-Up' button disappears (Sign-Up is within the Profile Page). The options under the 'My Account' Button also change to 'My Profile' and 'Logout'.
+For Superusers/Admin profiles, the user also has the 'Product Management' option, which will be detailed in the [Product Management](#product-management) section. This menu option is illustrated 
+below:
+![Navigation Large Screen- Logged In](documentation/SiteImages/Navigation_Large_SuperUser.jpg)
 
+To demonstrate the responsive design of the site, the following illustrates the appearence of the site navigation within smaller screens. The First image illustrates the look of the menu once
+compounded to fit small screens. The second image illustrates the expansion of the navigation menu:
 
-
-The site navigation links within the navbar remain consistant, however,
-the other functions change depending on where the site visitor is logged in or not, or if logged in, whether they're a superuser or not.
-
-
-
+![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu.jpg)
     
-Landing Page
-Product Page
-Product Detail
-Shopping Bag
-Checkout Page
-Completed Order
-Profile
-Order View
-Product Review
-Product Management
+### Landing Page
+### Product Page
+### Product Detail
+### Shopping Bag
+### Checkout Page
+### Completed Order
+### Profile
+### Order View
+### Product Review
+### Product Management
 
 Django Admin Interface
 
