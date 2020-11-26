@@ -270,7 +270,12 @@ Wireframing and Implemented Functionality + Page breakdowns across the site.
 
 ### General Site Navigation
 The site navigation functionality is all built into the base.html parent template. This contains all default components that all other templates inherit from. All the templates discussed within
-this section extend the base template. The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the 
+this section extend the base template through the use of `block` statements, as illustrated below:
+  ```html
+  {% block content %}
+  {& endblock %}
+  ```
+The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the 
 components, i.e. the navigation bar, is inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
 
 The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. The site navigation links within the navbar remain consistant, 
@@ -286,9 +291,11 @@ below:
 ![Navigation Large Screen- Logged In](documentation/SiteImages/Navigation_Large_SuperUser.jpg)
 
 To demonstrate the responsive design of the site, the following illustrates the appearence of the site navigation within smaller screens. The First image illustrates the look of the menu once
-compounded to fit small screens. The second image illustrates the expansion of the navigation menu:
+compounded to fit small screens. 
+![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) 
 
-![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu2.jpg)
+The following image illustrates the expansion of the navigation menu. Again this demonstrates the responsiveness of the site in catering for smaller screen sizes.
+![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu2.jpg)
     
 ### Landing Page
 ### Product Page
