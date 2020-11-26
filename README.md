@@ -267,9 +267,27 @@ particular product, or indeed accessing the Product object from the Django Admin
 
 Wireframing and Implemented Functionality + Page breakdowns across the site.
 
-General Site Navigation
-    Large Screens
-    Mobile Screens
+
+### General Site Navigation
+The site navigation functionality is all built into the base.html parent template. This contains all default components that all other templates inherit from. All the templates discussed within
+this section extend the base template. The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the components,
+i.e. the navigation bar, is inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
+
+The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. As illustrated below, you can see that on larger screens, the full
+navigation bar is visible with all conponents (Anonymous User - Not Logged In). The various site navigation links allow customers to view of products within the specific categories as detailed 
+in the [View Category](#View-categories-of-products) user story. The appearence of the navbar on Large screens is illustrated below. In this view, we can also see the additional components visible
+to anonymous users:
+![Navigation Large Screen- Anonymous](documentation/SiteImages/Navigation_Large.jpg)
+
+
+
+
+The site navigation links within the navbar remain consistant, however,
+the other functions change depending on where the site visitor is logged in or not, or if logged in, whether they're a superuser or not.
+
+
+
+    
 Landing Page
 Product Page
 Product Detail
