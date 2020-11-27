@@ -306,6 +306,17 @@ created profile.
 ![Landing Page](documentation/SiteImages/landing_page.jpg)
 
 ### Product Page
+The Product page is the hub of the entire site. It's here that the customers can search through all available products on the site. Again, the navigation elements are consistent throughout the
+site, so the customer will have many familiar elements. Within the Product page, customers have the option of browsing through all available products, or should they require some more specific,
+they can filter down the list of products presented to them. This filtering is faciliated through the navigation elements of the Navbar (as detailed in the [General Site Navigation](#general-site-navigation)
+section). The customer also has the option of sorting the presented product list based on Price, Rating, Name, Category, as illustrated below.
+
+Within this page, with respect to the Products themselves, customers are presented with an Image representation of the product, the price of each item, it's category, and it's customer rating.
+On this page it's just about giving enough information to attract the customer to click on the item. From there, the user will be brought to the Prodcut Detail, which contains all information 
+about that particular item (Next Section).
+
+![Product Page](documentation/SiteImages/Product_Page.jpg)
+
 ### Product Detail
 ### Shopping Bag
 ### Checkout Page
