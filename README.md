@@ -259,7 +259,7 @@ Finally, one of the core features of the site, is the Inventory tracking system.
 a stock warning becomes visible on the Product Detail page. This calls out when the stock level is critical, and when the stock is depleted. Once the stock is depleted, the 'Add to Bag' button is 
 disabled, so the customers cannot add the product to an order, that the store can't fulfil (As illustrated in the [View Inventory Status of a product](#view-inventory-status-of-a-product) section). Therefore, when a product is back in stock, the superuser needs to be able to update the stock level for
 that specific product, and as such, re-enable the 'Add to Bag' button on that product. As with the above user stories, this functionality can be accessed either by selecting the 'Edit' button on a 
-particular product, or indeed accessing the Product object from the Django Admin Interface. the 
+particular product, or indeed accessing the Product object from the Django Admin Interface. 
 
 [Back to top](#Introduction)
 
@@ -324,7 +324,8 @@ to filter the product list for the user.
 The **Product Detail** page allows the user to focus on a specific chosen product, and view additional detail before commiting to the purchase. As with the previously detailed pages, the navigation
 elements are again consistant. The customer can again see the name, category, image and product rating. However, they are also now presented with a much more detailed description of thee product 
 in question. They are also able to access two very useful pieces of information - The Inventory level and the Product Reviews. The Rating score, and where this calculated, is detailed in the upcoming 
-[Product](#product) section. The [Product Review](#product-review) model is also detailed in the Database section. 
+[Product](#product) section. The [Product Review](#product-review) model itself is detailed in the Database section, and the creation of the reviews themselves is discussed in the [Product Review](#product-review) 
+section.
 
 In the images below you can see the two main section of the Product Detail page: Details & reviews
 *   Details Section - containing all product info and purchasing controls. This section presents the product information, while also allowing the customer to select the quantity they wish to purchase,
@@ -412,13 +413,21 @@ this is the value that is stored within the specific product object in the dateb
 [Product Detail](#product-detail) section.
 
 ### Product Management
+As discussed in the [Admin & Product Management](#admin-&-product-management) section, it's essential that site Admins be able to create, edit/update and delete products as required. As highlighted
+in the [Introduction](#introduction), the Django dashboard facilitates all requisite interactions with the site's data structures, including the Product objects themselves. The interface for 
+operations on product objects is discussed in detail in the [Product](#product) section. However Superusers also have the option of creating, editing and deleting products from the site itself.
 
+In order to create a new product, superusers have are presented with a 'Product Management' option within the menu for their 'My Account' button. This is only accessible to designated Superusers.
+This page presents the user with an empty form with all fields required to create a new Product object. the fields are discussed in detail in the [Product](#product) section. Once the form is 
+completed and the user selects the **'Add Product'** button, the product becomes visible to all site visitors from the mmain product page. The Product Management page is illustrated below: 
 
+![Product Management Page](documentation/SiteImages/Product_Management_Page.jpg)
 
+The mechanism for updating a product is very similar and follows the same template. When the superuser wishes to edit a specific product, they click on the edit link, that appears in both the 
+Product Detail and general Product pages. They are brought to a page with the same format, but populated with all the information currently stored for the product. This edit Product view is 
+illustrated below:
 
-Django Admin Interface
-
-Defensive Design
+![Product Edit Page](documentation/SiteImages/Product_Edit_Page.jpg)
 
 [Back to top](#Introduction)
     
