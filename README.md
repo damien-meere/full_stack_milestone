@@ -258,7 +258,7 @@ each product (Main Product page and Product Detail pages), or through the Django
 Finally, one of the core features of the site, is the Inventory tracking system. Each time a user completes and order, the stock count is deprecated by that amount. As the stock level decreases, 
 a stock warning becomes visible on the Product Detail page. This calls out when the stock level is critical, and when the stock is depleted. Once the stock is depleted, the 'Add to Bag' button is 
 disabled, so the customers cannot add the product to an order, that the store can't fulfil (As illustrated in the [View Inventory Status of a product](#view-inventory-status-of-a-product) section). Therefore, when a product is back in stock, the superuser needs to be able to update the stock level for
-that specific product, and as such, re-enable the 'Add to Bag' button on that Prodcut. As with the above user stories, this functionality can be accessed either by selecting the 'Edit' button on a 
+that specific product, and as such, re-enable the 'Add to Bag' button on that product. As with the above user stories, this functionality can be accessed either by selecting the 'Edit' button on a 
 particular product, or indeed accessing the Product object from the Django Admin Interface. the 
 
 [Back to top](#Introduction)
@@ -306,18 +306,36 @@ created profile.
 ![Landing Page](documentation/SiteImages/landing_page.jpg)
 
 ### Product Page
-The Product page is the hub of the entire site. It's here that the customers can search through all available products on the site. Again, the navigation elements are consistent throughout the
+The **Product** page is the hub of the entire site. It's here that the customers can search through all available products on the site. Again, the navigation elements are consistent throughout the
 site, so the customer will have many familiar elements. Within the Product page, customers have the option of browsing through all available products, or should they require some more specific,
 they can filter down the list of products presented to them. This filtering is faciliated through the navigation elements of the Navbar (as detailed in the [General Site Navigation](#general-site-navigation)
 section). The customer also has the option of sorting the presented product list based on Price, Rating, Name, Category, as illustrated below.
 
 Within this page, with respect to the Products themselves, customers are presented with an Image representation of the product, the price of each item, it's category, and it's customer rating.
-On this page it's just about giving enough information to attract the customer to click on the item. From there, the user will be brought to the Prodcut Detail, which contains all information 
+On this page it's just about giving enough information to attract the customer to click on the item. From there, the user will be brought to the Product Detail page, which contains all information 
 about that particular item (Next Section).
+
+The functionality supporting the product page and it's various filters is based within the `all_products` view. This view determines from the incoming user request (i.e. nav selection), how best
+to filter the product list for the user.
 
 ![Product Page](documentation/SiteImages/Product_Page.jpg)
 
 ### Product Detail
+The **Product Detail** page allows the user to focus on a specific chosen product, and view additional detail before commiting to the purchase. As with the previously detailed pages, the navigation
+elements are again consistant. The customer can again see the name, category, image and product rating. However, they are also now presented with a much more detailed description of thee product 
+in question. They are also able to access two very useful pieces of information - The Inventory level and the Product Reviews. The Rating score, and where this calculated, is detailed in the upcoming 
+[Product](#product) section. The [Product Review](#product-review) model is also detailed in the Database section. 
+
+In the images below you can see the two main section of the Product Detail page: Details & reviews
+*   Details - containing all product info and purchasing controls. This section presents the product information, while also allowing the customer to select the quantity they wish to purchase,
+and where appropriate the item size.
+*   Reviews - input from verified purchasers, their score and a text input. This section allows the user to view the input from users who have previously purchased the product. Again, this can 
+inform the customer as what they can expect from the product and can be used to give the customer the nudge they need to add the product to their shopping bag.
+
+![Product Detail Page](documentation/SiteImages/Product_Detail.jpg)
+
+![Product Reviews](documentation/SiteImages/Product_Detail_Review.jpg)
+
 ### Shopping Bag
 ### Checkout Page
 ### Completed Order
@@ -421,7 +439,7 @@ The Ratings field is tied directly to the **Product_Review** model. The value in
 of the specific product. The Reviewing process will be discussed in more detail in the [Current Features](#Current-Features) section. Finally, the Stock_level Field is dtermined by 
 site admin. When the admin sets this value, the users are presented with a notification on the product detail page to highlight current stock levels. When the stock level drops to a 
 critical level, the customer is provided with a warning to promote the purchase. When the stock is exhausted (0 remaining), the ADD TO BAG button on the product detail page is removed.
-This prevents users from adding a prodcut to their shopping bag, when we no long have the product in stock.
+This prevents users from adding a product to their shopping bag, when we no long have the product in stock.
 
 *   category
 *   sku
@@ -443,13 +461,13 @@ This prevents users from adding a prodcut to their shopping bag, when we no long
 ### Product Review
 
 The **Product Review** Model is utilised to harness feedback from confirmed product purchasers. Only those users that have completed an order (accessible via their profile) can 
-submit a review for a product. Even then, they can only provide a review for a prodcut that are associated with their Order. The process or creating and viewing product reviews 
+submit a review for a product. Even then, they can only provide a review for a product that are associated with their Order. The process or creating and viewing product reviews 
 will be details in the [Current Features](#Current-Features) section. The various fields within the model support this function. The review_id field is utilised to uniquely identify
 each review record within the datebase. The user field identifies the user that submits the review. This detail is used to populate the review section within the Product Detail
 page. 
 
 The Product field is a foreign key and associates the review with a specific product. On deletion of the product in question, all associated product reviews are deleted. The 
-review (Text input) and Timestamp (gathered at the time of submission - `datetime.now()`) are used to provide additional information on the Product detail page. The prodcut detail 
+review (Text input) and Timestamp (gathered at the time of submission - `datetime.now()`) are used to provide additional information on the Product detail page. The product detail 
 page will tabulate the various reviews associated with the specific Product. Finally, the ratings field is just an integer value between 0-5. The user can select their input within a dropdown menu with submitting their review. The actual rating assigned to the Product
 object itself is actually the average of all submitted review scores. On successful submission of a review, the ratings score is averaged across all reviews for that product. The 
 result is saved to the original Product Object rating field, as detailed above. 
@@ -514,9 +532,9 @@ of the products within the Order.
 
 ### Order Line Item
 
-The **Order Line Item** Model prodvides the specific prodcut context for the Order Model. The Order Line Item is bound to the Order Model and the Product Model. Both Order and Product
+The **Order Line Item** Model prodvides the specific product context for the Order Model. The Order Line Item is bound to the Order Model and the Product Model. Both Order and Product
 are Foreign Keys within the Order Line Item. When the user creates an order, the contents of their 'Shopping Bag' are iteratted over to create an individual Order Line Item instance,
-which details the requisite order number, the requisite product ID, the details of prodcut size where applicable (in the case of clothing) the quantity, and finally the total for that 
+which details the requisite order number, the requisite product ID, the details of product size where applicable (in the case of clothing) the quantity, and finally the total for that 
 particular line item, based on the aforementioned information. Within the Admin interface, the Order Line Items are visible within the output of the specific associated Order, as illustrated
 below.
 
