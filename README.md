@@ -202,7 +202,7 @@ of all items in the bag. Once the users selects this button they are presented w
 
 ####    Adjust quantities of items in shopping bag
 Once a user has gotten to the point of adding products to their shopping bag, it needs to be as easy as possible to proceed with a purchase. To ensure that customers can proceed to the payment phase 
-without issue, they need to be able to edit the contents of their bag, right up until we begin processing their payment. To facilite this user story, within the shoping bag, custerms have the opportunity
+without issue, they need to be able to edit the contents of their bag, right up until we begin processing their payment. To facilite this user story, within the shoping bag, customers have the opportunity
 to edit the contents of the bag. Either deleting items, or adjusting the quantity field of the item before proceeding. When they update their order quantities, the Grand Total value is updated to 
 reflect the new order details, before the user proceeds to the payment.
 
@@ -393,12 +393,28 @@ The following illustrates the view presented to the customer when they access th
 Within their Profile page, users are presented with the the full list of all their previous orders on the site, as illustrated above. When the user selects one of the Order numbers, they
 can view information similar to that shown for a completed order as shown in the [Completed Order](#completed-order) section. However, the user is presented with an Alert nofication to inform
 them they are viewing a past order confirmation. It's importatnt to differentiate the two views. The user is also presented with the option to leave a review for a product associated with one
-of their orders. Users can only access the Product Review section of the site through a completed order. This is detailed in the next section. The site users view is illustrated in the following:
+of their orders. Users can only access the Product Review section of the site through a completed order, via the **'Leave Product Review'** button. This is detailed in the next section. The 
+site users view is illustrated in the following, including the Alert notification:
 
 ![Profile Order Page](documentation/SiteImages/User_Profile_Order.jpg)
 
 ### Product Review
+As highlighted in the previous section, the Product review can only be accessed via the Order History section of a user's profile. This ensures that reviews are only captured from customers
+that have legitimately purchased that product. When the customer chooses to review a product they've purchased, they are presented with the following view. The customer is again presented 
+with a high level view of the order in question, detailing the order number, the timestamp for the order, the products on the order and the total price. The customers have the option to chose 
+from the products on the order, which specific product to review. The product dropdown is only populated with the specific products on the order. The feedback from the customer is captured
+through two values: the Rating (0-5) and the written review (text). 
+
+![Product Review Page](documentation/SiteImages/Product_Review_Page.jpg)
+
+The processing of the value submitted for the Product Rating is detailed in the [Product Review](#product-review) section. Ultimately, all review ratings for each product are averaged, and 
+this is the value that is stored within the specific product object in the datebase. The utilisation of the submitted text review in the specific Product Detail page is discussed in the 
+[Product Detail](#product-detail) section.
+
 ### Product Management
+
+
+
 
 Django Admin Interface
 
