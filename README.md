@@ -337,7 +337,7 @@ inform the customer as what they can expect from the product and can be used to 
 ![Product Reviews](documentation/SiteImages/Product_Detail_Review.jpg)
 
 ### Shopping Bag
-When the customer has selected a product for purchase, they click the 'Add to Bag' button from the Product Detail page. The customer is then presented with a notification to confirm the item
+When the customer has selected a product for purchase, they click the **'Add to Bag'** button from the Product Detail page. The customer is then presented with a notification to confirm the item
 has been added to their shopping bag as illustrated below. This notification also provides an update on the delivery charges applicable on the purchase. Once the Customer passes the free delivery
 threshold (as presented in the banner across the page in blue), the delivery fee is dropped.
 
@@ -352,6 +352,16 @@ to add to their shopping bag to proceed without delivery fees, as illustrated be
 ![Shopping Bag](documentation/SiteImages/Shopping_Bag.jpg)
 
 ### Checkout Page
+The **Checkout Page** is the last stop before the customer completes the purchase of their chosen products. Within this page, the customer is presented with a view the proposed Order details. If
+the customer is logged in, the Delivery details form is pre-populated with the information they. If the customer is anonymous, they much fill in these details at this point to the item can be
+delivered to them. The customer is also presented with a confirmation of the items associated with their order, so they can be confident in their purchase.
+
+At the bottom of the page, the customer can enter their card details and proceed with the purchase. The card entry field is linked to the [Stripe](https://stripe.com/ie) online payment 
+processing platform. 
+
+The following illustrates the Checkout Page:
+![Checkout](documentation/SiteImages/Checkout.jpg)
+
 ### Completed Order
 ### Profile
 ### Order View
