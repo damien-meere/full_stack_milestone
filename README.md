@@ -389,8 +389,14 @@ on. By clicking on the individual Order number, the user can view the Order Conf
 The following illustrates the view presented to the customer when they access their Profile page:
 ![Profile Page](documentation/SiteImages/User_Profile_Page.jpg)
 
-
 ### Order View
+Within their Profile page, users are presented with the the full list of all their previous orders on the site, as illustrated above. When the user selects one of the Order numbers, they
+can view information similar to that shown for a completed order as shown in the [Completed Order](#completed-order) section. However, the user is presented with an Alert nofication to inform
+them they are viewing a past order confirmation. It's importatnt to differentiate the two views. The user is also presented with the option to leave a review for a product associated with one
+of their orders. Users can only access the Product Review section of the site through a completed order. This is detailed in the next section. The site users view is illustrated in the following:
+
+![Profile Order Page](documentation/SiteImages/User_Profile_Order.jpg)
+
 ### Product Review
 ### Product Management
 
