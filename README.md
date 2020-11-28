@@ -327,16 +327,30 @@ in question. They are also able to access two very useful pieces of information 
 [Product](#product) section. The [Product Review](#product-review) model is also detailed in the Database section. 
 
 In the images below you can see the two main section of the Product Detail page: Details & reviews
-*   Details - containing all product info and purchasing controls. This section presents the product information, while also allowing the customer to select the quantity they wish to purchase,
+*   Details Section - containing all product info and purchasing controls. This section presents the product information, while also allowing the customer to select the quantity they wish to purchase,
 and where appropriate the item size.
-*   Reviews - input from verified purchasers, their score and a text input. This section allows the user to view the input from users who have previously purchased the product. Again, this can 
-inform the customer as what they can expect from the product and can be used to give the customer the nudge they need to add the product to their shopping bag.
 
 ![Product Detail Page](documentation/SiteImages/Product_Detail.jpg)
 
+*   Reviews Section- input from verified purchasers, their score and a text input. This section allows the user to view the input from users who have previously purchased the product. Again, this can 
+inform the customer as what they can expect from the product and can be used to give the customer the nudge they need to add the product to their shopping bag.
 ![Product Reviews](documentation/SiteImages/Product_Detail_Review.jpg)
 
 ### Shopping Bag
+When the customer has selected a product for purchase, they click the 'Add to Bag' button from the Product Detail page. The customer is then presented with a notification to confirm the item
+has been added to their shopping bag as illustrated below. This notification also provides an update on the delivery charges applicable on the purchase. Once the Customer passes the free delivery
+threshold (as presented in the banner across the page in blue), the delivery fee is dropped.
+
+![Add to Bag](documentation/SiteImages/AddtoBag_Notification.jpg)
+
+The customer can continue to navigate the site and add items to their bag, and once they are ready to proceed with a purchase, they can either click on the shopping bag icon in the navbar, or
+select the **'Go To Secure Checkout'** button from the notification window itself (shown above). The **Shopping bag** itself presents a breakdown of all the items that have been added to the 
+bag, including details of the quantity chosen. From this page, the customer can elect to update the quantity of a given item, or indeed delete it from their bag. The pricing of the provisional
+order is highlighted to the customer, to let them know what charges will be applied to their card should they proceed. This includes any potential delivery fees, and however much they would need
+to add to their shopping bag to proceed without delivery fees, as illustrated below.
+
+![Shopping Bag](documentation/SiteImages/Shopping_Bag.jpg)
+
 ### Checkout Page
 ### Completed Order
 ### Profile
