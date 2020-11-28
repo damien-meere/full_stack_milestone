@@ -363,7 +363,33 @@ The following illustrates the Checkout Page:
 ![Checkout](documentation/SiteImages/Checkout.jpg)
 
 ### Completed Order
+If the payment is unsuccessful for whatever reason, the user will be redirected back to the Checkout page to address the issue that has arisen. However, Once the payment has been processed 
+successfully, the customer is brought to the order confirmation page. Here the customer is presented with confirmation of all details associated with their successful order - i.e. the order
+information, the products contained within the order, the delivery address and the billing information, as illustrated below. The user is also presented with a confirmation notification in 
+the top right that identifies the order number and the email address to which the confirmation details have been sent. 
+
+Once the customer navigates away from this page, as long as they have a profile created, they can view all successfully processed orders within their profile page, as detailed in the next 
+section.
+
+![Order Confirmation Page](documentation/SiteImages/Order_Confirmation_Page.jpg)
+
 ### Profile
+Authentication and Accounting of user activity is a core component of any eCommerce site. Users need to be able to track their account activity and make sure users only have access to areas
+of the site that are suitable (i.e. ensure only superusers have access to product management and Admin console). Fortunately, Django’s authentication system provides the base structures for 
+authorising, authenticating and accounts user interactions with the platform. Details of this system are discussed in the [User & UserProfile Models](#user-&-userprofile-models) section. When
+a user creates a profile on the site, they can store delivery information, which ensures that when they proceed to purchase a product, the checkout process is much quicker. The creation of profiles
+also enables us to maintain details of successful Orders associated with a particular account. 
+
+The **Profile Page**, accessible via the **'My Account'** button in the navbar, pulls together all of the aforementioned information for the site user. Within their profile pages, customers
+can view the Delivery information, currently stored for that user. This information can also be updated if needs be. From here, users can also elect to subscribe to the site's mailing list. The
+mailing list enables the site Admin to circulate periodic deals & updates to valued customers, and as such build a stronger brand. The other main component on the Profile page is the Order 
+History. The customer's Order History is the complete list of all successful transactions associated with that specific account. All completed order's are accessible for the user to look back
+on. By clicking on the individual Order number, the user can view the Order Confirmation, similar to the one presented in the previous section.
+
+The following illustrates the view presented to the customer when they access their Profile page:
+![Profile Page](documentation/SiteImages/User_Profile_Page.jpg)
+
+
 ### Order View
 ### Product Review
 ### Product Management
