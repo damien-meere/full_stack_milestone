@@ -40,7 +40,7 @@ for the project is linked directly to the [Heroku-deployed site](https://dmeere-
 - [Future Features](#Future-Features)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
-- [Internal Deployment](#Internal-Deployment)
+- [Acknowledgements](#Acknowledgements)
 
 
 ## Demo
@@ -738,6 +738,12 @@ To deploy the project to Heroku you will need to do the following:
 9.  Open the app on Heroku and check to ensure that it's working correctly.
 
 [Back to top](#Introduction)
+
+## Acknowledgements
+The core Django functionality of this site was built following the direction of the Code Institute's 'Full Stack Frameworks With Django' module. I took this as the basis to build from. So 
+many thanks to the Code Institute for the fantastic training content. The Code Institute's Tutor team were also an invaluable help, more often than not helping me get to the right answer myself
+with some helpful prompting. Special thanks to my mentor, Dick Vlaarden. His guidance throughout this project, and indeed the entire course, was invaluable. And a huge thanks to my colleague
+Valentina Novarra, without whom I might not have made it this far.
 
 ###### <i>Disclaimer: This project (Milestone 4) was created for educational purposes as part of the Code Institute's Full Stack Software Development Course.</i>
 
