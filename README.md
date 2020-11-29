@@ -12,7 +12,7 @@ build a full-stack django-based site, with the requisite business logic to suppo
 manipulate product records, which are then presented to the site visitors/customers. Customers can create their own profiles, view and sort all products depending on their requirements,
 sign up for mailing lists, view the available inventory on products and leave reviews for products they have purchased. 
 
-All functionality relating to both site admins and customers is laid out within the [UX + User Stories](#UX+User-Stories) section below. 
+All functionality relating to the activities of site Admins and customers is laid out within the [UX + User Stories](#uxuser-stories) section below. 
 
 This project is built upon the Django framework and follows the model-template-view architecture pattern. Sqlite was utilised during development as the database for local testing.
 Sqlite is a relational database management system (RDBMS) embedded within the application itself. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/), Postgres is 
@@ -28,11 +28,12 @@ various application models (Products, Users, Orders, Product Reviews etc.), as i
 Throughout the development of the project, [Git](https://git-scm.com/) & [Github](https://github.com/) were employed to support version control. The [Github Repository](https://github.com/damien-meere/full_stack_milestone) 
 for the project is linked directly to the [Heroku-deployed site](https://dmeere-thecomicstore.herokuapp.com/).
 
+The base functionality of this eCommerce application was developed following the direction of the Code Institute's 'Full Stack Frameworks With Django' module, and the [Boutique Ado project](https://github.com/ckz8780/boutique_ado_v1/).
 
 ## Table of Contents
 
 - [Demo](#Demo)
-- [UX + User Stories](#UX+User-Stories)
+- [UX + User Stories](#uxuser-stories)
 - [Site Design](#Site-Design)
 - [Technologies](#Technologies-Used)
 - [Database](#Database)
@@ -740,10 +741,11 @@ To deploy the project to Heroku you will need to do the following:
 [Back to top](#Introduction)
 
 ## Acknowledgements
-The core Django functionality of this site was built following the direction of the Code Institute's 'Full Stack Frameworks With Django' module. I took this as the basis to build from. So 
-many thanks to the Code Institute for the fantastic training content. The Code Institute's Tutor team were also an invaluable help, more often than not helping me get to the right answer myself
-with some helpful prompting. Special thanks to my mentor, Dick Vlaarden. His guidance throughout this project, and indeed the entire course, was invaluable. And a huge thanks to my colleague
-Valentina Novarra, without whom I might not have made it this far.
+The core Django functionality of this site was built following the direction of the Code Institute's 'Full Stack Frameworks With Django' module, and the 
+[Boutique Ado project](https://github.com/ckz8780/boutique_ado_v1/). I took this as the basis to build from. So, many thanks to the Code Institute, and [Chris Z](https://github.com/ckz8780) 
+for the fantastic training content. The Code Institute's Tutor team were also an invaluable help, more often than not helping me get to the right answer myself with some helpful prompting. 
+Special thanks to my mentor, Dick Vlaarden. His guidance throughout this project, and indeed the entire course, was invaluable. And a huge thanks to my colleague Valentina Novarra, without 
+whom I might not have made it this far.
 
 ###### <i>Disclaimer: This project (Milestone 4) was created for educational purposes as part of the Code Institute's Full Stack Software Development Course.</i>
 
