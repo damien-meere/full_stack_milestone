@@ -684,7 +684,7 @@ priority access to the product once it's back in stock.
 
 ## Testing
 Throughout the development of this project, validation and testing was performed on all aspects of the project. Core to this process was the validation against the User stories highlighted in 
-the [UX + User Stories](#UX+User-Stories) section. All functionality was tested, with defensive design principles adhered to throughout. An Excel-based ![User Story Spreadsheet](documentation/user_stories_models_v2.xlsx)
+the [UX + User Stories](#UX+User-Stories) section. All functionality was tested, with defensive design principles adhered to throughout. An Excel-based ![User Story Spreadsheet](documentation/user_stories_models_v2.xlsx?raw=true)
 was used to track the development of the application.
     
 Throughout the development of the site, the use of templating structures anfd Jinja expressions meant it was difficult to validate through online validators. However, where possible, CSS, HTML
