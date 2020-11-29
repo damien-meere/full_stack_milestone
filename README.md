@@ -39,7 +39,6 @@ for the project is linked directly to the [Heroku-deployed site](https://dmeere-
 - [Current Features](#Current-Features)
 - [Future Features](#Future-Features)
 - [Testing](#Testing)
-- [Testing - Unresolved Bugs](#Testing-Unresolved_Bugs)
 - [Deployment](#Deployment)
 - [Internal Deployment](#Internal-Deployment)
 
@@ -684,23 +683,27 @@ priority access to the product once it's back in stock.
 [Back to top](#Introduction)
 
 ## Testing
-Validation against the User stories highlighted in previous sections was key. 
+Throughout the development of this project, validation and testing was performed on all aspects of the project. Core to this process was the validation against the User stories highlighted in 
+the [UX + User Stories](#UX+User-Stories) section. All functionality was tested, with defensive design principles adhered to throughout. An Excel-based ![User Story Spreadsheet](documentation/user_stories_models_v2.xlsx)
+was used to track the development of the application.
     
-Therefore the following tests were conducted to ensure that the originally stated users stories were catered to:
+Throughout the development of the site, the use of templating structures anfd Jinja expressions meant it was difficult to validate through online validators. However, where possible, CSS, HTML
+and Javascript files/code were passed through code validators to ensure there were no outstanding errors. I found it useful to 'Inspect' outputted pages, copy the underlying HTML and pass this
+through the validators to search for and correct any outstanding errors. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org) were utilised to check the 
+markup validity of Web documents against the w3c standards. the [JSHint](https://jshint.com/) utility was used to check for errors and potential problems in the JavaScript code. Gitpod was
+the IDE of choice while this application was being developed. The Flake8 Python library was a great toolkit for checking the code base for styling and programatic errors. More often than not,
+errors in the code were caught here.
 
-All CSS, HTML and Javascript files were passed through code validators. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org)
-checked the markup validity of Web documents against the w3c standards. the [JSHint](https://jshint.com/) utility was used to check for errors and potential problems in the
-JavaScript code.
+> NOTE:
+> Flake8 did call out in a number of cases that certain lines were too long. I attempted to use an appropriate escape and indentation to continue the code on the next line and reduce the line 
+> length, however in a number of cases this resulted in additional errors arising elsewhere in the code. So in a number of cases, I chose to ignore the line length error i favour of maintaining
+> the integrity of the application.
 
-This site was tested across multiple browsers (Chrome, Safari, Firefox), and on multiple devices (Samsung Galaxy S9/S10, Samsung Galaxy Tab, Apple iPad, iPhone 6/7/8)
-to ensure compatibility and responsiveness. As detailed in previous sections, depending on the screen size, elements will move and change size to ensure usability in unaffected by 
-the changes.
+
+This site itself was tested across multiple browsers (Chrome, Safari, Firefox), and on multiple devices (Samsung Galaxy S9/S10/S20, Samsung Galaxy Tab, Apple iPad, iPhone) to ensure compatibility
+and responsiveness. As detailed in previous sections, depending on the screen size, the structure of pages shifted to ensure usability in unaffected by the access mechanism.
 
 [Back to top](#Introduction)
-
-## Testing-Unresolved_Bugs
-
-
 
 ## Deployment
 A live iteration of this project can be found deployed to [Heroku](https://dmeere-thecomicstore.herokuapp.com/)
