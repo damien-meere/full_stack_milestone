@@ -646,7 +646,29 @@ Within the project, the following are some of the key features:
 *   Mailing list system, allowing anonymous or authenticated users to subscribe for site circulations
 *   Product Inventory system that allows for admins to ensure that users can only generate orders for products confirmed to be in stock
 
-[Back to top](#Introduction)
+### Defensive Design
+Defensive Design is all about designing for when things go wrong. It's all about anticipating both user and website error. When developing this project, defensive design was employed throughout
+all views, forms, models & templates, with all defensive elements tested extensively throughout the local test environment and within the deployed live application. Defensive elements included
+things like:
+*   Employing field and form validation to check for mistakes in user inputs
+*   Protecting site visitors from server errors and broken links with informative messages
+*   Assists the user before mistakes happen
+
+It's ultimately about ensuring that all user inteactions with the site can be accounted for, and that we can be confident that all user activity can be catered for. 
+
+There are a number of defensive elements at play with relation to site registration and navigation. Firstly, when a user is registering for an account, the username field is validated to 
+ensure the inputted value is in fact unique. With regards to navigating around the site, all areas of the site can been linked to, however, should the user attempt to access certain areas of 
+the site that require a user to be authenticated, or indeed authenticated as a superuser, they will generally be directed back to the Landing Page, or where appropriate, to the login page. This
+can happen should the user attempt browser url injection to get to gain access to areas of the site e.g. if a user is logged in and attempts to access `https://dmeere-thecomicstore.herokuapp.com/accounts/login/`,
+they are directed back to the landing page. Utimately, the site will attempt to bring the user back to the normal flow of the site, where appropriate for their level of access.
+
+This same approach is employed should a normal user attempt to access an area locked behind Authentication via url injection. An example of this is when a user attempts to access the Product 
+Management area (`https://dmeere-thecomicstore.herokuapp.com/products/add/`). This area is exclusive to superusers, and inappropriate for normal user accounts. Therefore, when a normal user
+inputs this URL, there are again just redirected back to the Landing page. 
+
+The site itself makes use of forms in a number of areas to capture user inputs. From the perspective of superusers, product objects are created within the Product Management form. And normal
+users can input product reviews. Within these forms, all fields are built with the most appropriatefield type in mind. User inputs are validated to ensure that all data provided is suitable 
+for the underlying model, as discussed in the [Database](#Database) section.
 
 ## Future-Features
 A number of features are planned for the next iteration of this project. They are as follows:
@@ -659,6 +681,7 @@ the scale of the reduction within the item price placeholder.
 priority access to the product once it's back in stock.
 *   User Account Disable/Delete functionality - should the user wish to terminate thier account for whatever reason, have the option available.
 
+[Back to top](#Introduction)
 
 ## Testing
 Validation against the User stories highlighted in previous sections was key. 
