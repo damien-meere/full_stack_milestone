@@ -649,10 +649,16 @@ Within the project, the following are some of the key features:
 [Back to top](#Introduction)
 
 ## Future-Features
+A number of features are planned for the next iteration of this project. They are as follows:
+*   Support for users updating posted product reviews. In conjunction with this functionality, the plan is to also expand the user's profile page to not only highlight previously created orders,
+but also track this posted reviews.
+*   Implementation of customer feedback to posted reviews (i.e. 'I found this Useful'). This enables users to better trust the feedback provided.
+*   Price Reduction Notification system. Should there be a drop in the price to a item, as well as moving the item to the 'Clearance' or 'Deals' categories, also provide a visual cue to highlight
+the scale of the reduction within the item price placeholder.
+*   Currently, when an item is out of stock, users cannot add the item to their bag. In the next iteration of the site, the users will have the option to put the item on back order, and request
+priority access to the product once it's back in stock.
+*   User Account Disable/Delete functionality - should the user wish to terminate thier account for whatever reason, have the option available.
 
-Stock Keeping System (utilising the SKU)
-Price Reduction notifications
-Complete Order on items with no stock - Added to back order or Opt out of purchase
 
 ## Testing
 Validation against the User stories highlighted in previous sections was key. 
