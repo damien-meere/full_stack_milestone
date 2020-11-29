@@ -17,7 +17,8 @@ All functionality relating to both site admins and customers is laid out within 
 This project is built upon the Django framework and follows the model-template-view architecture pattern. Sqlite was utilised during development as the database for local testing.
 Sqlite is a relational database management system (RDBMS) embedded within the application itself. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/), Postgres is 
 employed as the Database to house all data. Postgres is an open source object-relational database management system. The data structures and associated applications models are 
-detailed in the [Database](#Database) section.
+detailed in the [Database](#Database) section. Within the deployed site, Amazon Simple Storage Service (Amazon S3), a Cloud-based object storage service, is utilised to store the static (js, css),
+and media folders (site images).
 
 Utilising Django and the DBMS highlighted above, site admins, can access a customised Django-supported Admin Dashboard where they can Create, Read, Update and Delete records within the 
 various application models (Products, Users, Orders, Product Reviews etc.), as illustrated in the following image:
@@ -275,8 +276,8 @@ this section extend the base template through the use of `block` statements, as 
   {% block content %}
   {& endblock %}
   ```
-The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the 
-components, i.e. the navigation bar, is inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
+The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the components, i.e. the navigation bar, is 
+inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
 
 The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. The site navigation links within the navbar remain consistant, 
 however, the other functions change depending on whether the site visitor is logged in or not, or whether they're a superuser or not. As illustrated below, you can see that on larger screens, 
@@ -449,7 +450,7 @@ illustrated below:
 11. [Stripe](https://stripe.com/ie) - Online payment processing platform
 12. [Postgres](https://www.postgresql.org/) - open source object-relational database system
 13. [SQLite](www.sqlite.org) - light-weight relational database management system (RDBMS)
-
+14. [Amazon Simple Storage Service](https://aws.amazon.com/s3/) - Amazon S3 - cloud based object storage service
 
 [Back to top](#Introduction)
 
@@ -511,7 +512,7 @@ choose to unsubscribe from the list, by un-ticking this button. This process is 
 ### Product
 
 The **Product** Model contains all details relating to the products being sold on the site. This model links to both the Order Line Item and the Product Review models as a Foreign Key.
-The Product model itself contains the Category field as a Foreign Key, which facilitaes the differentation of various products types from the main page search functionality. The other
+The Product model itself contains the Category field as a Foreign Key, which facilitates the differentation of various products types from the main page search functionality. The other
 field within this model describe the product itself and it's status. For example, the SKU (Stock Keeping Unit) is product code that you can use to search and identify stock on hand 
 from lists, invoices, or order forms. It's typically used to facilitate inventory management. The Name, Description, Price and Image field allow customers to view information about 
 product before purchase. The has_sizes field is utilised to discern if a product is an item of clothing, and whether the customer should be able to pick the requisite size (S, M, L, XL etc.).
@@ -619,8 +620,8 @@ which details the requisite order number, the requisite product ID, the details 
 particular line item, based on the aforementioned information. Within the Admin interface, the Order Line Items are visible within the output of the specific associated Order, as illustrated
 below.
 
-*   order = models.ForeignKey(Order
-*   product = models.ForeignKey(Product
+*   order
+*   product
 *   product_size
 *   quantity
 *   lineitem_total
@@ -629,14 +630,21 @@ below.
 ![Order Line Item Admin](documentation/SiteImages/Admin_Order_Line_Item_Detail.jpg)
 
 ## Current-Features
+This project is built on Django 3.1.2, which facilitates the back-end Admin infrastructure. This foundation, and its support of the Jinja templating framework allows for the separation or 
+components, ann therefore the requisite scalability, as well as maintaining continuity across the site. Again, Bootstrap was utilised to facilitate page structure and display elements across 
+the various templates. This continuity is hugely important to the overall user experience. The utilisation of Bootstrap ensures that the project is full responsive across all browsers and 
+device sizes. The project also utilises the Stripe online payment processing platform to facilitate card payments, and where required, the appropriate handling to payment errors.
 
-Admin Portal - Django based
-Products pages + Navigation + toasts
-Product Review + Rating
-Shopping Bag + stripe
-SKU Generator
-Inventory function
-Mailing List
+Within the project, the following are some of the key features:
+*   Django-based Admin Portal
+*   User accounts + User Authentication, Authorisation and Accounting (Order History)
+*   Site navigation mapped to the specific User-type - Anonymous/Authenticated, User/Superuser 
+*   Implementation of AWS S3 Bucket to host the static (js & css files) and media folders (site images)
+*   eCommerce functionality facilitated through Stripe
+*   Responsive page design with product filter functionality, allowing users to view, sort and filter products depanding on their requirements
+*   Product Review and rating system to harness feedback from customers to better inform the purchases of future customers
+*   Mailing list system, allowing anonymous or authenticated users to subscribe for site circulations
+*   Product Inventory system that allows for admins to ensure that users can only generate orders for products confirmed to be in stock
 
 [Back to top](#Introduction)
 
