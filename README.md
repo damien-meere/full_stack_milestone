@@ -59,7 +59,7 @@ the site supports a comic book store's online presence. The main actors involved
 *   Purchasing & Checkout
 *   Admin & Product Management
 
-The checklist used to track the user stories can be accessed here - ![Checklist - Excel](documentation/user_stories_models_v2.xlsx)
+The checklist used to track the user stories can be accessed here - ![Checklist - Excel](documentation/user_stories_models_v2.xlsx?raw=true)
 
 ### Product View & Navigation
 ####    View products
