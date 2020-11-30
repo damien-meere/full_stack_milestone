@@ -326,7 +326,17 @@ to filter the product list for the user.
 
 ![Product Page](documentation/SiteImages/Product_Page.jpg)
 
+<details>
+   <summary>Product Page Wireframes (Desktop & Mobile)</summary>
 
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page.png" alt="Base template mobile wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page%20-%20Mobile.png" alt="Base template tablet-desktop wireframe">
+   </p>
+</details>
 
 ### Product Detail
 The **Product Detail** page allows the user to focus on a specific chosen product, and view additional detail before commiting to the purchase. As with the previously detailed pages, the navigation
