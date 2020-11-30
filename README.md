@@ -358,7 +358,7 @@ inform the customer as what they can expect from the product and can be used to 
 
 ####    Wireframes
 <details>
-   <summary>Product Page Wireframes (Desktop & Mobile)</summary>
+   <summary>Product Detail Page Wireframes (Desktop & Mobile)</summary>
 
    <p align="center">
       <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Detail.png" alt="Product Detail Page Desktop Wireframe">
@@ -383,6 +383,19 @@ order is highlighted to the customer, to let them know what charges will be appl
 to add to their shopping bag to proceed without delivery fees, as illustrated below.
 
 ![Shopping Bag](documentation/SiteImages/Shopping_Bag.jpg)
+
+####    Wireframes
+<details>
+   <summary>Shopping Bag Wireframes (Desktop & Mobile)</summary>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Shopping%20Bag.png" alt="Shopping Bag Page Desktop Wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Shopping%20Bag%20Page%20-%20Mobile.png" alt="Shopping Bag Mobile Wireframe">
+   </p>
+</details>
 
 ### Checkout Page
 The **Checkout Page** is the last stop before the customer completes the purchase of their chosen products. Within this page, the customer is presented with a view the proposed Order details. If
