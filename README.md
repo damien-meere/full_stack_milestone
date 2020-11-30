@@ -52,7 +52,7 @@ A live demo of the project can be found deployed to Heroku [Here](https://dmeere
 
 The goal of project was to build a full-stack site with the business logic to support the sale of products to customers/site visitors. In this case,
 the site supports a comic book store's online presence. The main actors involved in the site are **customers** (both logged in and anonymous), and the 
-**site admin**. The various interations with the site can be broken out into 5 key domains:
+**site admin**. The various interactions with the site can be broken out into 5 key domains:
 *   Product View & Navigation
 *   Registration and Individual User Account Functionality
 *   Sort & Search of Products
@@ -64,22 +64,22 @@ The checklist used to track the user stories can be accessed here - ![Checklist 
 ### Product View & Navigation
 ####    View products
 All site users need to be able to identify items for purchase on the site with minimal effort. They need to be able to easily navigate to a central
-respoitory and view all available products, and view high level information relating to each product (Name, Image, Price, Rating). This requirement is
-fulfulled within the Main Product Page which presents a view of the Product catalogue. The design of this main product page will be presented and 
+respository and view all available products, and view high level information relating to each product (Name, Image, Price, Rating). This requirement is
+fulfilled within the Main Product Page which presents a view of the Product catalogue. The design of this main product page will be presented and 
 discussed in the upcoming section - [Site Design](#Site-Design).
 ####    View individual product details
 All site users need to be able to focus in and delve into more specific details relating to a particular product - price, product description, 
 applicable sizes for clothing, Product Images, Inventory Availability, Ratings and Product Reviews. All of this information is in place to attract the 
-customer and promote the purchase of the product. This functionality Again, the design of the product detail page will be disucssed within the Site Design Section.
+customer and promote the purchase of the product. This functionality Again, the design of the product detail page will be discussed within the Site Design Section.
 ####    View categories of products
 It's hugely important that site users are able to filter the list of avilable products. In many cases with these types of sites, there can be a 
 substantial list of products available. Therefore, users need to be able to narrow the search parameters and limit their view of available products to
-the general area of interest. In this case, this user story is fulfulled throught the assingment of categories to the individual products. This is detailed in the [Database](#Database), where the 
+the general area of interest. In this case, this user story is fulfilled through the assignment of categories to the individual products. This is detailed in the [Database](#Database), where the 
 Product is presented in detail. The Categories, and their associated menu times enable the site users to select the type of product they wish to view. The following are the categories that site 
 users can filter their product view on:
 *   All products 
     *   Arranged by Price, 
-    *   Arranged byRatings,
+    *   Arranged by Ratings,
     *   Arranged by Category,
 *   Books
     *   Comics
@@ -92,7 +92,7 @@ users can filter their product view on:
     *   Hats
     *   Shirts
 *   Special Offers
-    *   New arrrivals
+    *   New arrivals
     *   Deals
     *   Clearance
 
@@ -100,13 +100,13 @@ users can filter their product view on:
 
 ####    Identify any clearance items or available discounts
 As with all online stores, the primary goal is to drive business, and push customers to complete purchases. With that in mind, it's very important that customers can easily identify and take advantage
-of offers/deals, and gain access to any price reductions across the site. In order to fulful this user story, the Special offers menu option was added, as detailed above. The Categories that fall under
-this seciton heading are as follows:
+of offers/deals, and gain access to any price reductions across the site. In order to fulfil this user story, the Special offers menu option was added, as detailed above. The Categories that fall under
+this section heading are as follows:
 *   New arrrivals
 *   Deals
 *   Clearance
 
-By filtering the product list on on these categories, users can quickly identify priced reduced items. As such, it increases the chances of customers adding these items to their shopping bag.
+By filtering the product list on these categories, users can quickly identify priced reduced items. As such, it increases the chances of customers adding these items to their shopping bag.
 
 ####    View total for all queued items for purchase
 Customers need to be able to keep track of the total cost of all items they're added to their shopping bag during a session. With each item that's added,
@@ -144,24 +144,24 @@ the users can very easily logout via the 'My Account' button on the navigation b
 ####    Recover password if necessary
 Site Users should be able to reset/recover their password should they need to. Again, the benefit of building this site on a robust platform like 
 Django, is that the out-of-the-box authentication handles this functionality. Should the user require it, the authentication system will enable the user
-to supply their email address and have they'll receive an e-mail allowing them to reset it.
+to supply their email address and they'll receive an e-mail allowing them to reset it.
 
 ####    Email confirmation with registration
 It's important that the site have accurate email address information for all users. As we saw in the previous section, when resetting an account password,
-when completing an Order and receiving the Order confirmation, the user email address is required to faciliate any communications with the user. Therefore,
+when completing an Order and receiving the Order confirmation, the user email address is required to facilitate any communications with the user. Therefore,
 when creating a new account, in order to finalise the account creation, the user is required to supply an email address. The user receives an email with
 a link to verify their account and confirm their new account on the site. Until their email is verified, they cannot access their account. 
 
 ####    Up to date personalised account
 One of the reasons for needing a profile is to maintain user information, so that users can view a history of their purchases, view order confirmations,
-manage their delivery information. This user story is faciliated within the User's own profile page which enables the user to supply/update their 
+manage their delivery information. This user story is facilitated within the User's own profile page which enables the user to supply/update their 
 delivery information, and view all previous orders.
 
 ####    Mailing List
 It's important that stores cultivate a relationship with their customers. One good way of doing this is the creation of a mailing list, that enables
 the store to circulate details of upcoming product releases, Price reductions, Ongoing Deals, Upcoming events etc. Within this site, this user story
 is facilitated through two mechanisms. Anonymous users (with no Profile), can sign up to be a part of the mailing list via the mailing list button on
-the home page. Customers with a registered account can elect to join the mailing list via their profile page, where they cna check the checkbox to join.
+the home page. Customers with a registered account can elect to join the mailing list via their profile page, where they can check the checkbox to join.
 
 
 
@@ -176,12 +176,12 @@ to facilitate easier filtering of products, users can limit their view of produc
 simply select the requisite category from the navbar.
 
 ####    Search for products by name or description
-Customers may have more specific criteria that they are searching for. So rather then just relying on broad categorys to try and isolate the requisite product, customers can specifically input their
-own search parameters to either identify a single product, or zone in on a number of products that match the users inputted search criteria. This user story is faciliated via the search field within
+Customers may have more specific criteria that they are searching for. So rather than just relying on broad categories to try and isolate the requisite product, customers can specifically input their
+own search parameters to either identify a single product, or zone in on a number of products that match the users inputted search criteria. This user story is facilitated via the search field within
 the sites nav bar. When the user inputs their parameters, the Name and Description field of each product is queried. If any products match that criteria, they are presented to the user.
 
 ####    Easily view search results
-Search parameters entered by a user can return a broad range of results, depending on the criteria entered. Therefore depending on the results, users must still be presented with a suitbale view to 
+Search parameters entered by a user can return a broad range of results, depending on the criteria entered. Therefore depending on the results, users must still be presented with a suitable view to 
 peruse through the resultant list of products. This user story is fulfilled within the site as when the user inputs a search parameter, the results are presented to the user in the exact same format
 as when products are sorted or filtered from the navbar menu.
 
@@ -189,7 +189,7 @@ as when products are sorted or filtered from the navbar menu.
 
 ### Purchasing & Checkout
 ####    Select size (where applicable) and quantity of product for purchasing
-Within the site certain items, typically clothing, require input from the user to select the requisite sixe (Small, medium, Large, Extra-Large etc.) Where appropriate, customers preference  with regards
+Within the site certain items, typically clothing, require input from the user to select the requisite size (Small, medium, Large, Extra-Large etc.) Where appropriate, customers preference with regards
 the item size needs to be harnessed. Within the Product management menu (available to superusers), and the Django admin portal, Site Admins can create/edit products. When they do, the admin has the 
 option to determine whether the product "Has Sizes". If the Admin user responds with a Yes, when a customer accesses the specific Product detail page, they are presented with an option to select the 
 required size as illustrated below.
@@ -197,26 +197,26 @@ required size as illustrated below.
 ![Size Selector](documentation/SiteImages/size_selector.jpg)
 
 ####    View all items that I've selected to add to shopping bag
-Once a customer has selected (Added to their Bag) all products they wish to purchase, they need to be able to review this product list before proceeding to the payment. Therefore to fulfil this 
-user story, the customer can view a list of all products currently in their shopping bag by selevting the shopping cart icon in the top right of the site. Below this icon is the current total cost
-of all items in the bag. Once the users selects this button they are presented with a list of all items they've added.
+Once a customer has selected (Added to their Bag) all products they wish to purchase, they need to be able to review this product list before proceeding to the payment. Therefore, to fulfil this 
+user story, the customer can view a list of all products currently in their shopping bag by selecting the shopping cart icon in the top right of the site. Below this icon is the current total cost
+of all items in the bag. Once the users select this button they are presented with a list of all items they've added.
 
 ####    Adjust quantities of items in shopping bag
 Once a user has gotten to the point of adding products to their shopping bag, it needs to be as easy as possible to proceed with a purchase. To ensure that customers can proceed to the payment phase 
-without issue, they need to be able to edit the contents of their bag, right up until we begin processing their payment. To facilite this user story, within the shoping bag, customers have the opportunity
-to edit the contents of the bag. Either deleting items, or adjusting the quantity field of the item before proceeding. When they update their order quantities, the Grand Total value is updated to 
+without issue, they need to be able to edit the contents of their bag, right up until we begin processing their payment. To facilitate this user story, within the shopping bag, customers have the opportunity
+to edit the contents of the bag. Either deleting items or adjusting the quantity field of the item before proceeding. When they update their order quantities, the Grand Total value is updated to 
 reflect the new order details, before the user proceeds to the payment.
 
 ####    Enter payment details
-As with any eCommerce site, the customers need to be able to complete the purchase of their chosen items. And again, the process of gathering the payment information and completing the transation 
-needs to be as hassle free as possible to ensure customers have no reason to leave. Once the customer has reviews their shopping bag and selected the 'Secure Checkout' button, they are brought to 
-the Checkout page. It's here that this user story is fulfilled. If the user has a profile, their delivery information may already be populated. However, at the botton of the screen, the user can 
+As with any eCommerce site, the customers need to be able to complete the purchase of their chosen items. And again, the process of gathering the payment information and completing the transaction 
+needs to be as hassle free as possible to ensure customers have no reason to leave. Once the customer has reviewed their shopping bag and selected the 'Secure Checkout' button, they are brought to 
+the Checkout page. It's here that this user story is fulfilled. If the user has a profile, their delivery information may already be populated. However, at the bottom of the screen, the user can 
 input their credit card details, as illustrated below. This card processing functionality is supported by [Stripe](https://stripe.com/ie), an online payment processing platform.
 
 ![Payment Details](documentation/SiteImages/payment_details.jpg)
 
 ####    View order confirmations
-Once a customer entered their card details and elected to proceed with a purchase, they need to be given all details related to the Order to ensure there are no discrepancies. Therefore, to fulfill
+Once a customer entered their card details and elected to proceed with a purchase, they need to be given all details related to the Order to ensure there are no discrepancies. Therefore, to fulfil
 this user story, on completion of an Order payment, the customer is presented with a complete breakdown of the processed Order. This Order confirmation contains details of the products included in 
 the order, the Delivery address, and the breakdown of the associated charges as illustrated below:
 
@@ -235,20 +235,20 @@ Review page allows the user to provide a review for only the products that were 
 
 ![Product Review](documentation/SiteImages/product_review.jpg)
 
-This information is appended to the specific product's detail page, and is used to inform the other customers and promote purchases. More information on this feature is contained within the [Current Features](#Current-Features) section.
+This information is appended to the specific product's detail page and is used to inform the other customers and promote purchases. More information on this feature is contained within the [Current Features](#Current-Features) section.
 
 
 
 ### Admin & Product Management
 ####    Add products
 The site admin needs to be able to easily add new products to the store's catalogue. This user story is fulfilled through two mechanisms. Firstly, when we create the Product Model, as discussed in the
-upcoming [Product](#Product) section, the Django platform enables us to interact with the model through the Adminstration portal. However, registered suerusers also have the capability of adding products
+upcoming [Product](#Product) section, the Django platform enables us to interact with the model through the Administration portal. However, registered superusers also have the capability of adding products
 though the site frontend. For Superusers, within the navbar, When the user selects 'My Account', they are presented with the option of 'Product Management'. This leads to an empty form, that contains
 all the requisite fields to create a new product object (Name, Description, has Sizes, Price, Stock Level, Image etc.).
 
 ####    Edit/update existing products
 Just as important as adding new products is the capability of editing/updating products details. Over the lifetime of a products numerous details may be required to change. For example, the price of 
-a product is regularly up for alteration, and in the case of significant proce drops, the category may need to be changed to 'Clearance'. Again, this user story can be fulfilled via the back-end admin
+a product is regularly up for alteration, and in the case of significant price drops, the category may need to be changed to 'Clearance'. Again, this user story can be fulfilled via the back-end admin
 interface, or through the product 'Edit' link, visible to all designated superusers while navigating the site.
 
 ####    Delete products
@@ -268,7 +268,7 @@ particular product, or indeed accessing the Product object from the Django Admin
 From the user stories detailed above, it was relatively simple to pull together a rough early design for the general look and feel for the site. The Wireframes for the site were built using 
 [Balsamiq Cloud](https://balsamiq.cloud/). This is the web version of Balsamiq Wireframes tool, which is used to design user interfaces online. A pdf of all original wireframes for the site 
 can be found here - ![Site Wireframes](documentation/Wireframes/ComicStorePages_v2.pdf?raw=true). As you will see from the early wireframes, the goal was to create an easy-to-navigate and 
-minimalist experience to ensure the user was able to quickly figure out out to move around the site and locate the product they wish to purchse. The target, as with all eCommerce sites is to 
+minimalist experience to ensure the user was able to quickly figure how out to move around the site and locate the product they wish to purchase. The target, as with all eCommerce sites is to 
 maximise the chances of a customer completing a purchase.
 
 The following sections detail the various pages throughout the site and breakdown their main components. Also included at the end of various sections is the option to view the original wireframe.
@@ -283,10 +283,10 @@ this section extend the base template through the use of `block` statements, as 
 The various pages comprising the site need only extend the central base template, and contain only the elements specific to that page. The rest of the components, i.e. the navigation bar, is 
 inherited. This separation or components ensures it's easier to scale up the application, as well as maintaining continuity across the site.
 
-The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. The site navigation links within the navbar remain consistant, 
+The navigation bar utilised bootstrap to ensure the functionality remains responsive across all screen sizes and device types. The site navigation links within the navbar remain consistent, 
 however, the other functions change depending on whether the site visitor is logged in or not, or whether they're a superuser or not. As illustrated below, you can see that on larger screens, 
-the full navigation bar is visible with all conponents (Anonymous User - Not Logged In). The various site navigation links allow customers to view of products within the specific categories 
-as detailed in the [View Category](#View-categories-of-products) user story. Under the 'My Account' Button, users have the options to Register or Login. The appearence of the navbar on large 
+the full navigation bar is visible with all components (Anonymous User - Not Logged In). The various site navigation links allow customers to view of products within the specific categories 
+as detailed in the [View Category](#View-categories-of-products) user story. Under the 'My Account' Button, users have the options to Register or Login. The appearance of the navbar on large 
 screens is illustrated below. In this view, we can also see the additional components visible to anonymous users:
 ![Navigation Large Screen- Anonymous](documentation/SiteImages/Navigation_Large.jpg)
 
@@ -295,7 +295,7 @@ For Superusers/Admin profiles, the user also has the 'Product Management' option
 below:
 ![Navigation Large Screen- Logged In](documentation/SiteImages/Navigation_Large_SuperUser.jpg)
 
-To demonstrate the responsive design of the site, the following illustrates the appearence of the site navigation within smaller screens. The First image illustrates the look of the menu once
+To demonstrate the responsive design of the site, the following illustrates the appearance of the site navigation within smaller screens. The First image illustrates the look of the menu once
 compounded to fit small screens. 
 ![Navigation Small Screen](documentation/SiteImages/Navigation_Small.jpg) 
 
@@ -314,14 +314,14 @@ created profile.
 ### Product Page
 The **Product** page is the hub of the entire site. It's here that the customers can search through all available products on the site. Again, the navigation elements are consistent throughout the
 site, so the customer will have many familiar elements. Within the Product page, customers have the option of browsing through all available products, or should they require some more specific,
-they can filter down the list of products presented to them. This filtering is faciliated through the navigation elements of the Navbar (as detailed in the [General Site Navigation](#general-site-navigation)
+they can filter down the list of products presented to them. This filtering is facilitated through the navigation elements of the Navbar (as detailed in the [General Site Navigation](#general-site-navigation)
 section). The customer also has the option of sorting the presented product list based on Price, Rating, Name, Category, as illustrated below.
 
-Within this page, with respect to the Products themselves, customers are presented with an Image representation of the product, the price of each item, it's category, and it's customer rating.
+Within this page, with respect to the Products themselves, customers are presented with an Image representation of the product, the price of each item, its category, and its customer rating.
 On this page it's just about giving enough information to attract the customer to click on the item. From there, the user will be brought to the Product Detail page, which contains all information 
 about that particular item (Next Section).
 
-The functionality supporting the product page and it's various filters is based within the `all_products` view. This view determines from the incoming user request (i.e. nav selection), how best
+The functionality supporting the product page and its various filters is based within the `all_products` view. This view determines from the incoming user request (i.e. nav selection), how best
 to filter the product list for the user.
 
 ![Product Page](documentation/SiteImages/Product_Page.jpg)
@@ -340,8 +340,8 @@ to filter the product list for the user.
 </details>
 
 ### Product Detail
-The **Product Detail** page allows the user to focus on a specific chosen product, and view additional detail before commiting to the purchase. As with the previously detailed pages, the navigation
-elements are again consistant. The customer can again see the name, category, image and product rating. However, they are also now presented with a much more detailed description of thee product 
+The **Product Detail** page allows the user to focus on a specific chosen product and view additional detail before committing  to the purchase. As with the previously detailed pages, the navigation
+elements are again consistent. The customer can again see the name, category, image and product rating. However, they are also now presented with a much more detailed description of thee product 
 in question. They are also able to access two very useful pieces of information - The Inventory level and the Product Reviews. The Rating score, and where this calculated, is detailed in the upcoming 
 [Product](#product) section. The [Product Review](#product-review) model itself is detailed in the Database section, and the creation of the reviews themselves is discussed in the [Product Review](#product-review) 
 section.
@@ -442,7 +442,7 @@ also enables us to maintain details of successful Orders associated with a parti
 The **Profile Page**, accessible via the **'My Account'** button in the navbar, pulls together all of the aforementioned information for the site user. Within their profile pages, customers
 can view the Delivery information, currently stored for that user. This information can also be updated if needs be. From here, users can also elect to subscribe to the site's mailing list. The
 mailing list enables the site Admin to circulate periodic deals & updates to valued customers, and as such build a stronger brand. The other main component on the Profile page is the Order 
-History. The customer's Order History is the complete list of all successful transactions associated with that specific account. All completed order's are accessible for the user to look back
+History. The customer's Order History is the complete list of all successful transactions associated with that specific account. All completed orders are accessible for the user to look back
 on. By clicking on the individual Order number, the user can view the Order Confirmation, similar to the one presented in the previous section.
 
 The following illustrates the view presented to the customer when they access their Profile page:
@@ -462,9 +462,9 @@ The following illustrates the view presented to the customer when they access th
 </details>
 
 ### Order View
-Within their Profile page, users are presented with the the full list of all their previous orders on the site, as illustrated above. When the user selects one of the Order numbers, they
-can view information similar to that shown for a completed order as shown in the [Completed Order](#completed-order) section. However, the user is presented with an Alert nofication to inform
-them they are viewing a past order confirmation. It's importatnt to differentiate the two views. The user is also presented with the option to leave a review for a product associated with one
+Within their Profile page, users are presented with the full list of all their previous orders on the site, as illustrated above. When the user selects one of the Order numbers, they
+can view information similar to that shown for a completed order as shown in the [Completed Order](#completed-order) section. However, the user is presented with an Alert notification to inform
+them they are viewing a past order confirmation. It's important to differentiate the two views. The user is also presented with the option to leave a review for a product associated with one
 of their orders. Users can only access the Product Review section of the site through a completed order, via the **'Leave Product Review'** button. This is detailed in the next section. The 
 site users view is illustrated in the following, including the Alert notification:
 
@@ -473,14 +473,14 @@ site users view is illustrated in the following, including the Alert notificatio
 ### Product Review
 As highlighted in the previous section, the Product review can only be accessed via the Order History section of a user's profile. This ensures that reviews are only captured from customers
 that have legitimately purchased that product. When the customer chooses to review a product they've purchased, they are presented with the following view. The customer is again presented 
-with a high level view of the order in question, detailing the order number, the timestamp for the order, the products on the order and the total price. The customers have the option to chose 
+with a high-level view of the order in question, detailing the order number, the timestamp for the order, the products on the order and the total price. The customers have the option to chose 
 from the products on the order, which specific product to review. The product dropdown is only populated with the specific products on the order. The feedback from the customer is captured
 through two values: the Rating (0-5) and the written review (text). 
 
 ![Product Review Page](documentation/SiteImages/Product_Review_Page.jpg)
 
 The processing of the value submitted for the Product Rating is detailed in the [Product Review](#product-review) section. Ultimately, all review ratings for each product are averaged, and 
-this is the value that is stored within the specific product object in the datebase. The utilisation of the submitted text review in the specific Product Detail page is discussed in the 
+this is the value that is stored within the specific product object in the database. The utilisation of the submitted text review in the specific Product Detail page is discussed in the 
 [Product Detail](#product-detail) section.
 
 ####    Wireframes
@@ -499,7 +499,7 @@ this is the value that is stored within the specific product object in the dateb
 ### Product Management
 As discussed in the [Admin & Product Management](#admin-&-product-management) section, it's essential that site Admins be able to create, edit/update and delete products as required. As highlighted
 in the [Introduction](#introduction), the Django dashboard facilitates all requisite interactions with the site's data structures, including the Product objects themselves. The interface for 
-operations on product objects is discussed in detail in the [Product](#product) section. However Superusers also have the option of creating, editing and deleting products from the site itself.
+operations on product objects is discussed in detail in the [Product](#product) section. However, Superusers also have the option of creating, editing and deleting products from the site itself.
 
 In order to create a new product, superusers have are presented with a 'Product Management' option within the menu for their 'My Account' button. This is only accessible to designated Superusers.
 This page presents the user with an empty form with all fields required to create a new Product object. the fields are discussed in detail in the [Product](#product) section. Once the form is 
@@ -508,7 +508,7 @@ completed and the user selects the **'Add Product'** button, the product becomes
 ![Product Management Page](documentation/SiteImages/Product_Management_Page.jpg)
 
 The mechanism for updating a product is very similar and follows the same template. When the superuser wishes to edit a specific product, they click on the edit link, that appears in both the 
-Product Detail and general Product pages. They are brought to a page with the same format, but populated with all the information currently stored for the product. This edit Product view is 
+Product Detail and general Product pages. They are brought to a page with the same format but populated with all the information currently stored for the product. This edit Product view is 
 illustrated below:
 
 ![Product Edit Page](documentation/SiteImages/Product_Edit_Page.jpg)
@@ -540,7 +540,7 @@ illustrated below:
 
 ## Database
 During the early development and later local testing of the application, [SQLite](www.sqlite.org) was utilised as the database management system embedded within the 
-application itself. This faciliated the early deployment of the User Registration and Authentication system through the django platform. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/) 
+application itself. This facilitated the early deployment of the User Registration and Authentication system through the django platform. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/) 
 on Heroku, [Postgres](https://www.postgresql.org/) was employed as the Database to house all data. Postgres is an open source object-relational database management system and is 
 installed as an add-on within the Heroku application.
 
@@ -567,7 +567,7 @@ The primary attributes of the default user are:
 
 ![User Admin](documentation/SiteImages/Admin_Users.jpg)
 
-The **UserProfile** model is directly associated with a specific User object, and is used to maintaining default delivery information for that individual. This model maintains a One-to-One 
+The **UserProfile** model is directly associated with a specific User object and is used to maintaining default delivery information for that individual. This model maintains a One-to-One 
 relationship with it's associated User Object. On deletion of the referenced User object, the related UserProfile object is also deleted. The following fields provide all the information
 required to fulfil any orders that the user might make through the site. This is bound directly to the Order model as a Foreign Key. 
 
@@ -595,13 +595,13 @@ choose to unsubscribe from the list, by un-ticking this button. This process is 
 ### Product
 
 The **Product** Model contains all details relating to the products being sold on the site. This model links to both the Order Line Item and the Product Review models as a Foreign Key.
-The Product model itself contains the Category field as a Foreign Key, which facilitates the differentation of various products types from the main page search functionality. The other
+The Product model itself contains the Category field as a Foreign Key, which facilitates the differentiation of various products types from the main page search functionality. The other
 field within this model describe the product itself and it's status. For example, the SKU (Stock Keeping Unit) is product code that you can use to search and identify stock on hand 
 from lists, invoices, or order forms. It's typically used to facilitate inventory management. The Name, Description, Price and Image field allow customers to view information about 
 product before purchase. The has_sizes field is utilised to discern if a product is an item of clothing, and whether the customer should be able to pick the requisite size (S, M, L, XL etc.).
 
 The Ratings field is tied directly to the **Product_Review** model. The value in this field is calculated by getting the average of all review scores submitted by confirmed purchasers
-of the specific product. The Reviewing process will be discussed in more detail in the [Current Features](#Current-Features) section. Finally, the Stock_level Field is dtermined by 
+of the specific product. The Reviewing process will be discussed in more detail in the [Current Features](#Current-Features) section. Finally, the Stock_level Field is determined by 
 site admin. When the admin sets this value, the users are presented with a notification on the product detail page to highlight current stock levels. When the stock level drops to a 
 critical level, the customer is provided with a warning to promote the purchase. When the stock is exhausted (0 remaining), the ADD TO BAG button on the product detail page is removed.
 This prevents users from adding a product to their shopping bag, when we no long have the product in stock.
@@ -628,7 +628,7 @@ This prevents users from adding a product to their shopping bag, when we no long
 The **Product Review** Model is utilised to harness feedback from confirmed product purchasers. Only those users that have completed an order (accessible via their profile) can 
 submit a review for a product. Even then, they can only provide a review for a product that are associated with their Order. The process or creating and viewing product reviews 
 will be details in the [Current Features](#Current-Features) section. The various fields within the model support this function. The review_id field is utilised to uniquely identify
-each review record within the datebase. The user field identifies the user that submits the review. This detail is used to populate the review section within the Product Detail
+each review record within the database. The user field identifies the user that submits the review. This detail is used to populate the review section within the Product Detail
 page. 
 
 The Product field is a foreign key and associates the review with a specific product. On deletion of the product in question, all associated product reviews are deleted. The 
@@ -666,9 +666,9 @@ the store's inventory. The model is limited to two field that provide a name, an
 The **Order** Model is one of the key models supporting the checkout application, and as such, the purchasing capability within the site. The Order Model is used to harness the various
 pieces of information required do fulfil a customers order (Delivery Information), harnessed from the User Profile (for logged in users).
 
-The Order model links directly to the UserProfile model (Foreign Key) and as such binds an order to a specific user profile. Order Model contains all the  The Order Model also details
-the various costs associated with an order (i.e. Delivery Cost, Order Total, Grand Total). These values are dependant on the associated Order Line Items (Detailed Below). The Stipe 
-Payment ID contains the identifier that can be matched against Stripe records to ensure payment has been received before processing the customers order and arranging for the delivery
+The Order model links directly to the UserProfile model (Foreign Key) and as such binds an order to a specific user profile. The Order Model also details
+the various costs associated with an order (i.e. Delivery Cost, Order Total, Grand Total). These values are dependent on the associated Order Line Items (Detailed Below). The Stipe 
+Payment ID contains the identifier that can be matched against Stripe records to ensure payment has been received before processing the customer's order and arranging for the delivery
 of the products within the Order.
 
 *   order_number
@@ -697,8 +697,8 @@ of the products within the Order.
 
 ### Order Line Item
 
-The **Order Line Item** Model prodvides the specific product context for the Order Model. The Order Line Item is bound to the Order Model and the Product Model. Both Order and Product
-are Foreign Keys within the Order Line Item. When the user creates an order, the contents of their 'Shopping Bag' are iteratted over to create an individual Order Line Item instance,
+The **Order Line Item** Model provides the specific product context for the Order Model. The Order Line Item is bound to the Order Model and the Product Model. Both Order and Product
+are Foreign Keys within the Order Line Item. When the user creates an order, the contents of their 'Shopping Bag' are iterated over to create an individual Order Line Item instance,
 which details the requisite order number, the requisite product ID, the details of product size where applicable (in the case of clothing) the quantity, and finally the total for that 
 particular line item, based on the aforementioned information. Within the Admin interface, the Order Line Items are visible within the output of the specific associated Order, as illustrated
 below.
@@ -714,7 +714,7 @@ below.
 
 ## Current-Features
 This project is built on Django 3.1.2, which facilitates the back-end Admin infrastructure. This foundation, and its support of the Jinja templating framework allows for the separation or 
-components, ann therefore the requisite scalability, as well as maintaining continuity across the site. Again, Bootstrap was utilised to facilitate page structure and display elements across 
+components, and therefore the requisite scalability, as well as maintaining continuity across the site. Again, Bootstrap was utilised to facilitate page structure and display elements across 
 the various templates. This continuity is hugely important to the overall user experience. The utilisation of Bootstrap ensures that the project is full responsive across all browsers and 
 device sizes. The project also utilises the Stripe online payment processing platform to facilitate card payments, and where required, the appropriate handling to payment errors.
 
@@ -724,7 +724,7 @@ Within the project, the following are some of the key features:
 *   Site navigation mapped to the specific User-type - Anonymous/Authenticated, User/Superuser 
 *   Implementation of AWS S3 Bucket to host the static (js & css files) and media folders (site images)
 *   eCommerce functionality facilitated through Stripe
-*   Responsive page design with product filter functionality, allowing users to view, sort and filter products depanding on their requirements
+*   Responsive page design with product filter functionality, allowing users to view, sort and filter products depending on their requirements
 *   Product Review and rating system to harness feedback from customers to better inform the purchases of future customers
 *   Mailing list system, allowing anonymous or authenticated users to subscribe for site circulations
 *   Product Inventory system that allows for admins to ensure that users can only generate orders for products confirmed to be in stock
@@ -737,20 +737,20 @@ things like:
 *   Protecting site visitors from server errors and broken links with informative messages
 *   Assists the user before mistakes happen
 
-It's ultimately about ensuring that all user inteactions with the site can be accounted for, and that we can be confident that all user activity can be catered for. 
+It's ultimately about ensuring that all user interactions with the site can be accounted for, and that we can be confident that all user activity can be catered for. 
 
 There are a number of defensive elements at play with relation to site registration and navigation. Firstly, when a user is registering for an account, the username field is validated to 
 ensure the inputted value is in fact unique. With regards to navigating around the site, all areas of the site can been linked to, however, should the user attempt to access certain areas of 
 the site that require a user to be authenticated, or indeed authenticated as a superuser, they will generally be directed back to the Landing Page, or where appropriate, to the login page. This
 can happen should the user attempt browser url injection to get to gain access to areas of the site e.g. if a user is logged in and attempts to access `https://dmeere-thecomicstore.herokuapp.com/accounts/login/`,
-they are directed back to the landing page. Utimately, the site will attempt to bring the user back to the normal flow of the site, where appropriate for their level of access.
+they are directed back to the landing page. Ultimately, the site will attempt to bring the user back to the normal flow of the site, where appropriate for their level of access.
 
 This same approach is employed should a normal user attempt to access an area locked behind Authentication via url injection. An example of this is when a user attempts to access the Product 
 Management area (`https://dmeere-thecomicstore.herokuapp.com/products/add/`). This area is exclusive to superusers, and inappropriate for normal user accounts. Therefore, when a normal user
 inputs this URL, there are again just redirected back to the Landing page. 
 
 The site itself makes use of forms in a number of areas to capture user inputs. From the perspective of superusers, product objects are created within the Product Management form. And normal
-users can input product reviews. Within these forms, all fields are built with the most appropriatefield type in mind. User inputs are validated to ensure that all data provided is suitable 
+users can input product reviews. Within these forms, all fields are built with the most appropriate field-type in mind. User inputs are validated to ensure that all data provided is suitable 
 for the underlying model, as discussed in the [Database](#Database) section.
 
 ## Future-Features
@@ -762,7 +762,7 @@ but also track this posted reviews.
 the scale of the reduction within the item price placeholder.
 *   Currently, when an item is out of stock, users cannot add the item to their bag. In the next iteration of the site, the users will have the option to put the item on back order, and request
 priority access to the product once it's back in stock.
-*   User Account Disable/Delete functionality - should the user wish to terminate thier account for whatever reason, have the option available.
+*   User Account Disable/Delete functionality - should the user wish to terminate their account for whatever reason, have the option available.
 
 [Back to top](#Introduction)
 
@@ -771,11 +771,11 @@ Throughout the development of this project, validation and testing was performed
 the [UX + User Stories](#UX+User-Stories) section. All functionality was tested, with defensive design principles adhered to throughout. An Excel-based ![User Story Spreadsheet](documentation/user_stories_models_v2.xlsx?raw=true)
 was used to track the development of the application.
     
-Throughout the development of the site, the use of templating structures anfd Jinja expressions meant it was difficult to validate through online validators. However, where possible, CSS, HTML
-and Javascript files/code were passed through code validators to ensure there were no outstanding errors. I found it useful to 'Inspect' outputted pages, copy the underlying HTML and pass this
+Throughout the development of the site, the use of templating structures and Jinja expressions meant it was difficult to validate through online validators. However, where possible, CSS, HTML
+and JavaScript files/code were passed through code validators to ensure there were no outstanding errors. I found it useful to 'Inspect' outputted pages, copy the underlying HTML and pass this
 through the validators to search for and correct any outstanding errors. The [CSS Validator](https://jigsaw.w3.org/css-validator/) & [HTML Validator](https://validator.w3.org) were utilised to check the 
 markup validity of Web documents against the w3c standards. the [JSHint](https://jshint.com/) utility was used to check for errors and potential problems in the JavaScript code. Gitpod was
-the IDE of choice while this application was being developed. The Flake8 Python library was a great toolkit for checking the code base for styling and programatic errors. More often than not,
+the IDE of choice while this application was being developed. The Flake8 Python library was a great toolkit for checking the code base for styling and programmatic errors. More often than not,
 errors in the code were caught here.
 
 > NOTE:
@@ -797,7 +797,7 @@ into your terminal. To cut ties with this GitHub repository, type `git remote rm
 
 >NOTE:
 >Ensure that when testing with the Stripe-supported payment system, utilise the [Stripe Testing](https://stripe.com/docs/testing#cards) details. 
->Throughout the development of this project the followig details were utilised - Card number: 4242424242424242 (16-digit Card number), CVV & Date: Any digit combinations you wish.
+>Throughout the development of this project the following details were utilised - Card number: 4242424242424242 (16-digit Card number), CVV & Date: Any digit combinations you wish.
 
 You can also Clone this Repository to GitHub Desktop, by navigating to the [main page](https://github.com/damien-meere/full_stack_milestone) of the 
 repository on GitHub, under the repository name, click Clone or download. Click Open in Desktop to clone the repository and open it in GitHub Desktop. Click Choose... and, 
@@ -810,7 +810,7 @@ To deploy the project to Heroku you will need to do the following:
 3.  Verify that the project has an up to date Procfile and requirements.txt
 4.  Ensure you have Heroku set up as a remote repo (`git remote -v`)
 5.  Push the project to the Heroku remote (`git push heroku master`)
-6.  Set the requisite environmental variables/confirg vars on heroku:
+6.  Set the requisite environmental variables/config vars on heroku:
     *   AWS_ACCESS_KEY_ID (S3 Application)
     *   AWS_SECRET_ACCESS_KEY (S3 Application)
     *   DATABASE_URL (Provisioned Postgres Database)
