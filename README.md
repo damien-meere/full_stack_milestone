@@ -326,15 +326,16 @@ to filter the product list for the user.
 
 ![Product Page](documentation/SiteImages/Product_Page.jpg)
 
+####    Wireframes
 <details>
    <summary>Product Page Wireframes (Desktop & Mobile)</summary>
 
    <p align="center">
-      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page.png" alt="Base template mobile wireframe">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page.png" alt="Prodcut Page Desktop Wireframe">
    </p>
 
    <p align="center">
-      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page%20-%20Mobile.png" alt="Base template tablet-desktop wireframe">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page%20-%20Mobile.png" alt="Prodcut Page Mobile Wireframe">
    </p>
 </details>
 
@@ -354,6 +355,19 @@ and where appropriate the item size.
 *   Reviews Section- input from verified purchasers, their score and a text input. This section allows the user to view the input from users who have previously purchased the product. Again, this can 
 inform the customer as what they can expect from the product and can be used to give the customer the nudge they need to add the product to their shopping bag.
 ![Product Reviews](documentation/SiteImages/Product_Detail_Review.jpg)
+
+####    Wireframes
+<details>
+   <summary>Product Page Wireframes (Desktop & Mobile)</summary>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Detail.png" alt="Product Detail Page Desktop Wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Detail%20Page%20-%20Mobile.png" alt="Product Page Mobile Wireframe">
+   </p>
+</details>
 
 ### Shopping Bag
 When the customer has selected a product for purchase, they click the **'Add to Bag'** button from the Product Detail page. The customer is then presented with a notification to confirm the item
