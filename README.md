@@ -448,6 +448,19 @@ on. By clicking on the individual Order number, the user can view the Order Conf
 The following illustrates the view presented to the customer when they access their Profile page:
 ![Profile Page](documentation/SiteImages/User_Profile_Page.jpg)
 
+####    Wireframes
+<details>
+   <summary>Profile Page Wireframes (Desktop & Mobile)</summary>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Profile.png" alt="Profile Page Desktop Wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Profile%20Page%20-%20Mobile.png" alt="Profile Page Mobile Wireframe">
+   </p>
+</details>
+
 ### Order View
 Within their Profile page, users are presented with the the full list of all their previous orders on the site, as illustrated above. When the user selects one of the Order numbers, they
 can view information similar to that shown for a completed order as shown in the [Completed Order](#completed-order) section. However, the user is presented with an Alert nofication to inform
