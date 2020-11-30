@@ -483,6 +483,19 @@ The processing of the value submitted for the Product Rating is detailed in the 
 this is the value that is stored within the specific product object in the datebase. The utilisation of the submitted text review in the specific Product Detail page is discussed in the 
 [Product Detail](#product-detail) section.
 
+####    Wireframes
+<details>
+   <summary>Product Review Page Wireframes (Desktop & Mobile)</summary>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Review.png" alt="Product Review Page Desktop Wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Review%20Page%20-%20Mobile.png" alt="Product Review Page Mobile Wireframe">
+   </p>
+</details>
+
 ### Product Management
 As discussed in the [Admin & Product Management](#admin-&-product-management) section, it's essential that site Admins be able to create, edit/update and delete products as required. As highlighted
 in the [Introduction](#introduction), the Django dashboard facilitates all requisite interactions with the site's data structures, including the Product objects themselves. The interface for 
