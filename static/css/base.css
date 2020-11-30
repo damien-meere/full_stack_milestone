@@ -6,7 +6,7 @@ body {
     background: url('/media/homepage_background_yellow.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: rgb(37, 37, 37);
     font-family: 'Raleway', sans-serif;
 }
 
@@ -107,6 +107,10 @@ header {
 }
 .alignright {
 	float: right;
+}
+
+#sort-selector {
+    font-size: 15px;
 }
 
 /* enables button to change appearence on hover */
