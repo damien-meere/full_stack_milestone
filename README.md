@@ -41,7 +41,7 @@ The base functionality of this eCommerce application was developed following the
 - [Future Features](#Future-Features)
 - [Testing](#Testing)
 - [Deployment](#Deployment)
-- [Acknowledgements](#Acknowledgements)
+- [Credits](#Credits)
 
 
 ## Demo
@@ -823,12 +823,20 @@ To deploy the project to Heroku you will need to do the following:
 
 [Back to top](#Introduction)
 
-## Acknowledgements
+
+
+## Credits
+
+### Acknowledgements
 The core Django functionality of this site was built following the direction of the Code Institute's 'Full Stack Frameworks With Django' module, and the 
 [Boutique Ado project](https://github.com/ckz8780/boutique_ado_v1/). I took this as the basis to build from. So, many thanks to the Code Institute, and [Chris Z](https://github.com/ckz8780) 
 for the fantastic training content. The Code Institute's Tutor team were also an invaluable help, more often than not helping me get to the right answer myself with some helpful prompting. 
 Special thanks to my mentor, Dick Vlaarden. His guidance throughout this project, and indeed the entire course, was invaluable. And a huge thanks to my colleague Valentina Novarra, without 
 whom I might not have made it this far.
+
+### Content and Media
+The product descriptions and images were obtained from sites like [Amazon](www.amazon.co.uk) and [Big Bang Comics](https://stores.comichub.com/big_bang_comics/). These were used to give an
+accrate representation of the products in question.
 
 ###### <i>Disclaimer: This project (Milestone 4) was created for educational purposes as part of the Code Institute's Full Stack Software Development Course.</i>
 
