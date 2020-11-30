@@ -265,9 +265,13 @@ particular product, or indeed accessing the Product object from the Django Admin
 [Back to top](#Introduction)
 
 ## Site Design
+From the user stories detailed above, it was relatively simple to pull together a rough early design for the general look and feel for the site. The Wireframes for the site were built using 
+[Balsamiq Cloud](https://balsamiq.cloud/). This is the web version of Balsamiq Wireframes tool, which is used to design user interfaces online. A pdf of all original wireframes for the site 
+can be found here - ![Site Wireframes](documentation/Wireframes/ComicStorePages_v2.pdf?raw=true). As you will see from the early wireframes, the goal was to create an easy-to-navigate and 
+minimalist experience to ensure the user was able to quickly figure out out to move around the site and locate the product they wish to purchse. The target, as with all eCommerce sites is to 
+maximise the chances of a customer completing a purchase.
 
-Wireframing and Implemented Functionality + Page breakdowns across the site.
-
+The following sections detail the various pages throughout the site and breakdown their main components. Also included at the end of various sections is the option to view the original wireframe.
 
 ### General Site Navigation
 The site navigation functionality is all built into the base.html parent template. This contains all default components that all other templates inherit from. All the templates discussed within
@@ -297,7 +301,8 @@ compounded to fit small screens.
 
 The following image illustrates the expansion of the navigation menu. Again this demonstrates the responsiveness of the site in catering for smaller screen sizes.
 ![Navigation Small Screen + Menu](documentation/SiteImages/Navigation_Small+Menu2.jpg)
-    
+
+   
 ### Landing Page
 The landing page is a simple page to welcome to the users to the site. The purpose of this page is to direct the customers attention towards the navigation elements, and enable them to quickly
 familiarise themselves with the structure of the site. From the landing page, the customers may utilise the navigation functionality to view filtered lists of products, or they may elect to follow
@@ -320,6 +325,8 @@ The functionality supporting the product page and it's various filters is based 
 to filter the product list for the user.
 
 ![Product Page](documentation/SiteImages/Product_Page.jpg)
+
+
 
 ### Product Detail
 The **Product Detail** page allows the user to focus on a specific chosen product, and view additional detail before commiting to the purchase. As with the previously detailed pages, the navigation
@@ -451,11 +458,11 @@ illustrated below:
 12. [Postgres](https://www.postgresql.org/) - open source object-relational database system
 13. [SQLite](www.sqlite.org) - light-weight relational database management system (RDBMS)
 14. [Amazon Simple Storage Service](https://aws.amazon.com/s3/) - Amazon S3 - cloud based object storage service
+15. [Balsamiq Cloud](https://balsamiq.cloud/) -  is the web version of Balsamiq Wireframes tool for designing and reviewing user interfaces online.
 
 [Back to top](#Introduction)
 
 ## Database
-
 During the early development and later local testing of the application, [SQLite](www.sqlite.org) was utilised as the database management system embedded within the 
 application itself. This faciliated the early deployment of the User Registration and Authentication system through the django platform. Within the [deployed site](https://dmeere-thecomicstore.herokuapp.com/) 
 on Heroku, [Postgres](https://www.postgresql.org/) was employed as the Database to house all data. Postgres is an open source object-relational database management system and is 
