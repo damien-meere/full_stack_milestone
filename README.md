@@ -331,11 +331,11 @@ to filter the product list for the user.
    <summary>Product Page Wireframes (Desktop & Mobile)</summary>
 
    <p align="center">
-      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page.png" alt="Prodcut Page Desktop Wireframe">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page.png" alt="Product Page Desktop Wireframe">
    </p>
 
    <p align="center">
-      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page%20-%20Mobile.png" alt="Prodcut Page Mobile Wireframe">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Page%20-%20Mobile.png" alt="Product Page Mobile Wireframe">
    </p>
 </details>
 
@@ -365,7 +365,7 @@ inform the customer as what they can expect from the product and can be used to 
    </p>
 
    <p align="center">
-      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Detail%20Page%20-%20Mobile.png" alt="Product Page Mobile Wireframe">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Product%20Detail%20Page%20-%20Mobile.png" alt="Product Detail Page Mobile Wireframe">
    </p>
 </details>
 
@@ -407,6 +407,19 @@ processing platform.
 
 The following illustrates the Checkout Page:
 ![Checkout](documentation/SiteImages/Checkout.jpg)
+
+####    Wireframes
+<details>
+   <summary>Checkout Page Wireframes (Desktop & Mobile)</summary>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Checkout.png" alt="Checkout Page Desktop Wireframe">
+   </p>
+
+   <p align="center">
+      <img height="350" src="https://github.com/damien-meere/full_stack_milestone/blob/master/documentation/Wireframes/Checkout%20Page%20-%20Mobile.png" alt="Checkout Page Mobile Wireframe">
+   </p>
+</details>
 
 ### Completed Order
 If the payment is unsuccessful for whatever reason, the user will be redirected back to the Checkout page to address the issue that has arisen. However, Once the payment has been processed 
